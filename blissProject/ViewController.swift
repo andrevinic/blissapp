@@ -12,9 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shared.fetchQuestions { (questions, error) in
-            print("FETCHED QUESTIONS: \(questions)")
-        }
+       
         // Do any additional setup after loading the view, typically from a nib.
     }
 

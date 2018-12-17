@@ -12,9 +12,11 @@ class QuestionsViewModel: NSObject {
 
     var questions: [Question] = []
     
-    func fetchQuestions(){
+    func fetchQuestions(completion: @escaping (_ success: Bool, _ error: Error?) -> Void){
         NetworkManager.shared.fetchQuestions { (questions, error) in
-            self.questions = questions
+            self.questions.append(contentsOf: questions)
+            completion(true, nil)
+            print("FETCHED \(questions)")
         }
     }
 }

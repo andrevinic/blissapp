@@ -28,6 +28,7 @@
 		F04257E021C73F5D00D09570 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F04257DE21C73F5D00D09570 /* QuestionTableViewCell.xib */; };
 		F04257E321C742A900D09570 /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257E221C742A900D09570 /* QuestionsViewModel.swift */; };
 		F04257E521C7438100D09570 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257E421C7438000D09570 /* R.generated.swift */; };
+		F04257E821C751C800D09570 /* UIImageView+KingFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257E721C751C800D09570 /* UIImageView+KingFisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		F04257DE21C73F5D00D09570 /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
 		F04257E221C742A900D09570 /* QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewModel.swift; sourceTree = "<group>"; };
 		F04257E421C7438000D09570 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		F04257E721C751C800D09570 /* UIImageView+KingFisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+KingFisher.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		F042579621C71A8F00D09570 /* blissProject */ = {
 			isa = PBXGroup;
 			children = (
+				F04257E621C751AC00D09570 /* extensions */,
 				F04257E421C7438000D09570 /* R.generated.swift */,
 				F04257D721C73E7700D09570 /* questions */,
 				F04257D321C7373600D09570 /* loadscreen */,
@@ -244,6 +247,14 @@
 				F04257E221C742A900D09570 /* QuestionsViewModel.swift */,
 			);
 			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		F04257E621C751AC00D09570 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F04257E721C751C800D09570 /* UIImageView+KingFisher.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +502,7 @@
 				F04257CF21C72E4100D09570 /* NetworkManager.swift in Sources */,
 				F04257D921C73E8300D09570 /* QuestionsViewController.swift in Sources */,
 				F04257CC21C71F7100D09570 /* Question.swift in Sources */,
+				F04257E821C751C800D09570 /* UIImageView+KingFisher.swift in Sources */,
 				F04257D221C7300200D09570 /* Choice.swift in Sources */,
 				F04257D021C72E4100D09570 /* QuestionService.swift in Sources */,
 				F04257E321C742A900D09570 /* QuestionsViewModel.swift in Sources */,

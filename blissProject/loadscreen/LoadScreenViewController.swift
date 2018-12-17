@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoadScreenViewController: ViewController {
+class LoadScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +19,20 @@ class LoadScreenViewController: ViewController {
         NetworkManager.shared.fetchHealth { (success, error) in
             switch success{
             case true:
+                self.buildQuestionsViewController()
                 print("STATUS OK")
             case false:
                 print("STATUS NOT OK")
             }
         }
+    }
+    
+    func buildQuestionsViewController(){
+        guard let questionsViewController = R.storyboard.questions.questionsViewController()
+            else{
+                return
+        }
+        self.navigationController?.pushViewController(questionsViewController, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
