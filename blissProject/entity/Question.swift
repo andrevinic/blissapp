@@ -16,6 +16,7 @@ struct Question{
     let thumb_url: String
     let published_at: String
 }
+
 extension Question: Decodable{
     
     private enum ResultCodingKeys: String, CodingKey{
