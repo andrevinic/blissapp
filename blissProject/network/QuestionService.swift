@@ -12,7 +12,7 @@ import Moya
 enum QuestionService{
     
     case questions
-    case genrer
+    case health
 }
 
 extension QuestionService:TargetType{
@@ -22,7 +22,7 @@ extension QuestionService:TargetType{
         case .questions:
             let parameters = [String: String]()
             return parameters
-        case .genrer:
+        case .health:
             let parameters = [String: String]()
             return parameters
         }
@@ -42,8 +42,8 @@ extension QuestionService:TargetType{
         switch self{
         case .questions:
             return "/questions"
-        case .genrer:
-            return "/genre/movie/list"
+        case .health:
+            return "/health"
 
         }
         
@@ -54,7 +54,7 @@ extension QuestionService:TargetType{
         switch self {
         case .questions:
             return .get
-        case .genrer:
+        case .health:
             return .get
 
         }
@@ -67,10 +67,8 @@ extension QuestionService:TargetType{
             var parameters = [String: Any]()
             parameters["limit"] = "30"
             return parameters
-        case .genrer:
-            var parameters = [String: Any]()
-            parameters["api_key"] = "1f54bd990f1cdfb230adb312546d765d"
-            parameters["language"] = "en-US"
+        case .health:
+            let parameters = [String: Any]()
             return parameters
 
         }

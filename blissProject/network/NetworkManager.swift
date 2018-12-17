@@ -20,6 +20,19 @@ struct NetworkManager: Networkable{
     var provider = MoyaProvider<QuestionService>(plugins: [NetworkLoggerPlugin(verbose: true)])
     static let shared:NetworkManager = NetworkManager()
 
+    func fetchHealth(completion: @escaping (_ success: Bool, _ error: Error?) -> Void){
+        
+        provider.request(.health) { result in
+            switch result {
+            case let .success(moyaResponse):
+                completion(true, nil)
+            case let .failure(error):
+                completion(false, error)
+                
+            }
+        }
+    }
+    
     func fetchQuestions(completion: @escaping (_ success: [Question], _ error: Error?) -> Void){
     
         provider.rx
@@ -35,17 +48,4 @@ struct NetworkManager: Networkable{
             debugPrint(error)
         }
     }
-//
-//    func fetchMovieList(page: Int, completion: @escaping (_ success: [Movie], _ error: Error?) -> Void) {
-//        let provider = MoyaProvider<MovieService>(plugins: [NetworkLoggerPlugin(verbose: true)])
-//        provider.rx
-//            .request(.upcoming(pagination: page))
-//            .subscribe(onSuccess: { (response) in
-//                if let results = try? response.map(Upcoming.self, atKeyPath: nil, using: JSONDecoder(), failsOnEmptyData: true){
-//                    completion(results.movies, nil)
-//                }
-//        }) { (error) in
-//            debugPrint(error)
-//        }
-//    }
 }

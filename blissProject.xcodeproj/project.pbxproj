@@ -21,6 +21,13 @@
 		F04257CF21C72E4100D09570 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257CD21C72E4100D09570 /* NetworkManager.swift */; };
 		F04257D021C72E4100D09570 /* QuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257CE21C72E4100D09570 /* QuestionService.swift */; };
 		F04257D221C7300200D09570 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257D121C7300200D09570 /* Choice.swift */; };
+		F04257D521C7374600D09570 /* LoadScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257D421C7374600D09570 /* LoadScreenViewController.swift */; };
+		F04257D921C73E8300D09570 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257D821C73E8300D09570 /* QuestionsViewController.swift */; };
+		F04257DB21C73E8D00D09570 /* questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04257DA21C73E8D00D09570 /* questions.storyboard */; };
+		F04257DF21C73F5D00D09570 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257DD21C73F5D00D09570 /* QuestionTableViewCell.swift */; };
+		F04257E021C73F5D00D09570 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F04257DE21C73F5D00D09570 /* QuestionTableViewCell.xib */; };
+		F04257E321C742A900D09570 /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257E221C742A900D09570 /* QuestionsViewModel.swift */; };
+		F04257E521C7438100D09570 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257E421C7438000D09570 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +74,13 @@
 		F04257CD21C72E4100D09570 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F04257CE21C72E4100D09570 /* QuestionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionService.swift; sourceTree = "<group>"; };
 		F04257D121C7300200D09570 /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
+		F04257D421C7374600D09570 /* LoadScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadScreenViewController.swift; sourceTree = "<group>"; };
+		F04257D821C73E8300D09570 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		F04257DA21C73E8D00D09570 /* questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = questions.storyboard; sourceTree = "<group>"; };
+		F04257DD21C73F5D00D09570 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		F04257DE21C73F5D00D09570 /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		F04257E221C742A900D09570 /* QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewModel.swift; sourceTree = "<group>"; };
+		F04257E421C7438000D09570 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +159,9 @@
 		F042579621C71A8F00D09570 /* blissProject */ = {
 			isa = PBXGroup;
 			children = (
+				F04257E421C7438000D09570 /* R.generated.swift */,
+				F04257D721C73E7700D09570 /* questions */,
+				F04257D321C7373600D09570 /* loadscreen */,
 				F04257CA21C71F6300D09570 /* entity */,
 				F04257C521C71E0C00D09570 /* network */,
 				F042579721C71A8F00D09570 /* AppDelegate.swift */,
@@ -193,6 +210,42 @@
 			path = entity;
 			sourceTree = "<group>";
 		};
+		F04257D321C7373600D09570 /* loadscreen */ = {
+			isa = PBXGroup;
+			children = (
+				F04257D421C7374600D09570 /* LoadScreenViewController.swift */,
+			);
+			path = loadscreen;
+			sourceTree = "<group>";
+		};
+		F04257D721C73E7700D09570 /* questions */ = {
+			isa = PBXGroup;
+			children = (
+				F04257E121C7429500D09570 /* viewmodels */,
+				F04257DC21C73F4900D09570 /* views */,
+				F04257D821C73E8300D09570 /* QuestionsViewController.swift */,
+				F04257DA21C73E8D00D09570 /* questions.storyboard */,
+			);
+			path = questions;
+			sourceTree = "<group>";
+		};
+		F04257DC21C73F4900D09570 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F04257DD21C73F5D00D09570 /* QuestionTableViewCell.swift */,
+				F04257DE21C73F5D00D09570 /* QuestionTableViewCell.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		F04257E121C7429500D09570 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				F04257E221C742A900D09570 /* QuestionsViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,6 +254,7 @@
 			buildConfigurationList = F04257BC21C71A9000D09570 /* Build configuration list for PBXNativeTarget "blissProject" */;
 			buildPhases = (
 				143B26B5EFBBA143AD443E57 /* [CP] Check Pods Manifest.lock */,
+				F04257D621C73D5A00D09570 /* R Swift */,
 				F042579021C71A8F00D09570 /* Sources */,
 				F042579121C71A8F00D09570 /* Frameworks */,
 				F042579221C71A8F00D09570 /* Resources */,
@@ -303,6 +357,8 @@
 			files = (
 				F04257A221C71A9000D09570 /* LaunchScreen.storyboard in Resources */,
 				F042579F21C71A9000D09570 /* Assets.xcassets in Resources */,
+				F04257DB21C73E8D00D09570 /* questions.storyboard in Resources */,
+				F04257E021C73F5D00D09570 /* QuestionTableViewCell.xib in Resources */,
 				F042579D21C71A8F00D09570 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +466,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blissProject/Pods-blissProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F04257D621C73D5A00D09570 /* R Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "R Swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -417,11 +487,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04257D521C7374600D09570 /* LoadScreenViewController.swift in Sources */,
 				F04257CF21C72E4100D09570 /* NetworkManager.swift in Sources */,
+				F04257D921C73E8300D09570 /* QuestionsViewController.swift in Sources */,
 				F04257CC21C71F7100D09570 /* Question.swift in Sources */,
 				F04257D221C7300200D09570 /* Choice.swift in Sources */,
 				F04257D021C72E4100D09570 /* QuestionService.swift in Sources */,
+				F04257E321C742A900D09570 /* QuestionsViewModel.swift in Sources */,
+				F04257DF21C73F5D00D09570 /* QuestionTableViewCell.swift in Sources */,
 				F042579A21C71A8F00D09570 /* ViewController.swift in Sources */,
+				F04257E521C7438100D09570 /* R.generated.swift in Sources */,
 				F042579821C71A8F00D09570 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
