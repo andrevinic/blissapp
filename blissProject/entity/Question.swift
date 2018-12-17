@@ -15,6 +15,7 @@ struct Question{
     let image_url: String
     let thumb_url: String
     let published_at: String
+    var choices: [Choice] = []
 }
 
 extension Question: Decodable{
@@ -25,6 +26,7 @@ extension Question: Decodable{
         case image_url
         case thumb_url
         case published_at
+        case choices
     }
     
     init(from decoder: Decoder) throws {
@@ -35,6 +37,7 @@ extension Question: Decodable{
         image_url = try container.decode(String.self, forKey: .image_url)
         thumb_url = try container.decode(String.self, forKey: .thumb_url)
         published_at = try container.decode(String.self, forKey: .published_at)
+        choices = try container.decode([Choice].self, forKey: .choices)
     }
 }
 

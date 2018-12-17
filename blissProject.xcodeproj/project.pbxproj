@@ -20,7 +20,7 @@
 		F04257CC21C71F7100D09570 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257CB21C71F7100D09570 /* Question.swift */; };
 		F04257CF21C72E4100D09570 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257CD21C72E4100D09570 /* NetworkManager.swift */; };
 		F04257D021C72E4100D09570 /* QuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257CE21C72E4100D09570 /* QuestionService.swift */; };
-		F04257D221C7300200D09570 /* ChoiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257D121C7300200D09570 /* ChoiceList.swift */; };
+		F04257D221C7300200D09570 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257D121C7300200D09570 /* Choice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 		F04257CB21C71F7100D09570 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F04257CD21C72E4100D09570 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F04257CE21C72E4100D09570 /* QuestionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionService.swift; sourceTree = "<group>"; };
-		F04257D121C7300200D09570 /* ChoiceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceList.swift; sourceTree = "<group>"; };
+		F04257D121C7300200D09570 /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				F04257CB21C71F7100D09570 /* Question.swift */,
-				F04257D121C7300200D09570 /* ChoiceList.swift */,
+				F04257D121C7300200D09570 /* Choice.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -419,7 +419,7 @@
 			files = (
 				F04257CF21C72E4100D09570 /* NetworkManager.swift in Sources */,
 				F04257CC21C71F7100D09570 /* Question.swift in Sources */,
-				F04257D221C7300200D09570 /* ChoiceList.swift in Sources */,
+				F04257D221C7300200D09570 /* Choice.swift in Sources */,
 				F04257D021C72E4100D09570 /* QuestionService.swift in Sources */,
 				F042579A21C71A8F00D09570 /* ViewController.swift in Sources */,
 				F042579821C71A8F00D09570 /* AppDelegate.swift in Sources */,

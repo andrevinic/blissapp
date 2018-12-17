@@ -8,23 +8,6 @@
 
 import Foundation
 
-struct ChoiceList{
-    var choices:[Choice] = []
-}
-
-
-extension ChoiceList: Decodable{
-    
-    private enum ResultCodingKeys: String, CodingKey{
-        case choices
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: ResultCodingKeys.self)
-        choices = try container.decode([Choice].self, forKey: .choices)
-    }
-}
-
 struct Choice{
     var choice: String
     var votes: Int
