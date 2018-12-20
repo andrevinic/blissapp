@@ -1,6 +1,10 @@
 PODS:
   - Alamofire (4.8.0)
+  - Charts (3.1.0):
+    - Charts/Core (= 3.1.0)
+  - Charts/Core (3.1.0)
   - Kingfisher (4.0.0)
+  - lottie-ios (2.5.2)
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
@@ -18,7 +22,9 @@ PODS:
     - RxAtomic (~> 4.4)
 
 DEPENDENCIES:
+  - Charts (= 3.1)
   - Kingfisher (<= 4.0)
+  - lottie-ios
   - Moya/RxSwift (~> 11.0)
   - R.swift (<= 3.0)
   - RxCocoa (~> 4.0)
@@ -27,7 +33,9 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Charts
     - Kingfisher
+    - lottie-ios
     - Moya
     - R.swift
     - R.swift.Library
@@ -38,7 +46,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Charts: 0b0c96f6118b6ce63f11adbcaa3b31045ee4d772
   Kingfisher: 5cd55fa124d1e731f1d4b04b02832e0e0432d1a9
+  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   R.swift: 5a8b4a4ea565b0f20c39d8ce1445f3d3a9064768
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
@@ -47,6 +57,6 @@ SPEC CHECKSUMS:
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: 5297d5ee69982a930cf13b13c3a8a3722bbad118
+PODFILE CHECKSUM: 0e97af17c21b25c0f3a7f2be98a96c49776e4db7
 
 COCOAPODS: 1.5.3

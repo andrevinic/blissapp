@@ -10,6 +10,12 @@
 		2AA3177BE0131D51B55DC1C3 /* Pods_blissProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DFEC499237979707A9D521 /* Pods_blissProject.framework */; };
 		DFD1BE30E79A4C286D2CA60B /* Pods_blissProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B511A88FCCFC51F5742D15B /* Pods_blissProjectTests.framework */; };
 		ECB2D4DC19203728AB610957 /* Pods_blissProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682DF07A8CEEF00F04EDFC6 /* Pods_blissProjectUITests.framework */; };
+		F003416421C9CCD900B41912 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = F003416321C9CCD900B41912 /* Status.swift */; };
+		F003416721C9D85E00B41912 /* no_internet_connection.json in Resources */ = {isa = PBXBuildFile; fileRef = F003416621C9D85E00B41912 /* no_internet_connection.json */; };
+		F003416921C9D86300B41912 /* download_icon_success.json in Resources */ = {isa = PBXBuildFile; fileRef = F003416821C9D86300B41912 /* download_icon_success.json */; };
+		F003416F21CB0F5300B41912 /* DetailQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F003416E21CB0F5200B41912 /* DetailQuestionViewController.swift */; };
+		F003417121CB105B00B41912 /* details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F003417021CB105B00B41912 /* details.storyboard */; };
+		F003420721CB2D7300B41912 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F003420621CB2D7300B41912 /* BaseViewController.swift */; };
 		F042579821C71A8F00D09570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042579721C71A8F00D09570 /* AppDelegate.swift */; };
 		F042579A21C71A8F00D09570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042579921C71A8F00D09570 /* ViewController.swift */; };
 		F042579D21C71A8F00D09570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F042579B21C71A8F00D09570 /* Main.storyboard */; };
@@ -58,6 +64,12 @@
 		76FDC85F54A1CEF184FD6E88 /* Pods-blissProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blissProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-blissProjectUITests/Pods-blissProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		87DFEC499237979707A9D521 /* Pods_blissProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blissProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CB952652BD3D534964FF07 /* Pods-blissProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blissProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-blissProjectTests/Pods-blissProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		F003416321C9CCD900B41912 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		F003416621C9D85E00B41912 /* no_internet_connection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = no_internet_connection.json; sourceTree = "<group>"; };
+		F003416821C9D86300B41912 /* download_icon_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = download_icon_success.json; sourceTree = "<group>"; };
+		F003416E21CB0F5200B41912 /* DetailQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuestionViewController.swift; sourceTree = "<group>"; };
+		F003417021CB105B00B41912 /* details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = details.storyboard; sourceTree = "<group>"; };
+		F003420621CB2D7300B41912 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F042579421C71A8F00D09570 /* blissProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blissProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F042579721C71A8F00D09570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F042579921C71A8F00D09570 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +148,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F003416521C9D83400B41912 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				F003416621C9D85E00B41912 /* no_internet_connection.json */,
+				F003416821C9D86300B41912 /* download_icon_success.json */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		F003416D21CB0F0B00B41912 /* details */ = {
+			isa = PBXGroup;
+			children = (
+				F003416E21CB0F5200B41912 /* DetailQuestionViewController.swift */,
+				F003417021CB105B00B41912 /* details.storyboard */,
+				F003420621CB2D7300B41912 /* BaseViewController.swift */,
+			);
+			path = details;
+			sourceTree = "<group>";
+		};
 		F042578B21C71A8F00D09570 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +192,8 @@
 		F042579621C71A8F00D09570 /* blissProject */ = {
 			isa = PBXGroup;
 			children = (
+				F003416D21CB0F0B00B41912 /* details */,
+				F003416521C9D83400B41912 /* resources */,
 				F04257E621C751AC00D09570 /* extensions */,
 				F04257E421C7438000D09570 /* R.generated.swift */,
 				F04257D721C73E7700D09570 /* questions */,
@@ -209,6 +242,7 @@
 			children = (
 				F04257CB21C71F7100D09570 /* Question.swift */,
 				F04257D121C7300200D09570 /* Choice.swift */,
+				F003416321C9CCD900B41912 /* Status.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -366,11 +400,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F003416921C9D86300B41912 /* download_icon_success.json in Resources */,
 				F04257A221C71A9000D09570 /* LaunchScreen.storyboard in Resources */,
 				F042579F21C71A9000D09570 /* Assets.xcassets in Resources */,
 				F04257DB21C73E8D00D09570 /* questions.storyboard in Resources */,
+				F003416721C9D85E00B41912 /* no_internet_connection.json in Resources */,
 				F04257E021C73F5D00D09570 /* QuestionTableViewCell.xib in Resources */,
 				F042579D21C71A8F00D09570 /* Main.storyboard in Resources */,
+				F003417121CB105B00B41912 /* details.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +490,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-blissProject/Pods-blissProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -460,10 +498,12 @@
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -471,6 +511,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,13 +544,16 @@
 				F04257D921C73E8300D09570 /* QuestionsViewController.swift in Sources */,
 				F04257CC21C71F7100D09570 /* Question.swift in Sources */,
 				F04257E821C751C800D09570 /* UIImageView+KingFisher.swift in Sources */,
+				F003420721CB2D7300B41912 /* BaseViewController.swift in Sources */,
 				F04257D221C7300200D09570 /* Choice.swift in Sources */,
 				F04257D021C72E4100D09570 /* QuestionService.swift in Sources */,
 				F04257E321C742A900D09570 /* QuestionsViewModel.swift in Sources */,
 				F04257DF21C73F5D00D09570 /* QuestionTableViewCell.swift in Sources */,
+				F003416421C9CCD900B41912 /* Status.swift in Sources */,
 				F042579A21C71A8F00D09570 /* ViewController.swift in Sources */,
 				F04257E521C7438100D09570 /* R.generated.swift in Sources */,
 				F042579821C71A8F00D09570 /* AppDelegate.swift in Sources */,
+				F003416F21CB0F5300B41912 /* DetailQuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

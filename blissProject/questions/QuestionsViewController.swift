@@ -22,11 +22,14 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(R.nib.questionTableViewCell)
-
+        fetch()
+        
+    }
+    
+    func fetch(){
         self.viewModel.fetchQuestions { (success, error) in
             self.tableView.reloadData()
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,7 +70,14 @@ extension QuestionsViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(250)
+        return CGFloat(150)
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let index = indexPath.row
+        
+        if index == self.viewModel.questions.count - 1 {
+            fetch()
+        }
+    }
 }

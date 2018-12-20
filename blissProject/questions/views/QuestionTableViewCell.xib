@@ -20,27 +20,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="335" height="160.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-gY-Bzv">
-                        <rect key="frame" x="0.0" y="0.0" width="114" height="95"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="95" id="JZ0-TO-w3w"/>
-                            <constraint firstAttribute="width" constant="114" id="X8W-oe-IHh"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MG9-wR-Umu">
                         <rect key="frame" x="129" y="26" width="175" height="109"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-gY-Bzv">
+                        <rect key="frame" x="16" y="33" width="114" height="95"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="95" id="JZ0-TO-w3w"/>
+                            <constraint firstAttribute="width" constant="114" id="X8W-oe-IHh"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="rX8-gY-Bzv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0Py-pV-rcZ"/>
+                    <constraint firstItem="rX8-gY-Bzv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="0Py-pV-rcZ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="MG9-wR-Umu" secondAttribute="trailing" constant="15" id="0SG-yq-9al"/>
                     <constraint firstAttribute="bottomMargin" secondItem="MG9-wR-Umu" secondAttribute="bottom" constant="15" id="3mq-f6-nxs"/>
-                    <constraint firstItem="rX8-gY-Bzv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Bl3-Ev-fm1"/>
+                    <constraint firstItem="rX8-gY-Bzv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Bl3-Ev-fm1"/>
                     <constraint firstItem="MG9-wR-Umu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="EkQ-rn-10x"/>
-                    <constraint firstItem="MG9-wR-Umu" firstAttribute="leading" secondItem="rX8-gY-Bzv" secondAttribute="trailing" constant="15" id="fOp-KB-i4M"/>
+                    <constraint firstItem="MG9-wR-Umu" firstAttribute="leading" secondItem="rX8-gY-Bzv" secondAttribute="trailing" constant="-1" id="fOp-KB-i4M"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

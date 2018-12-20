@@ -18,7 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJH-xw-maK">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-ov-umh">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="UbL-Jg-C7e"/>
+                                    <constraint firstAttribute="height" constant="128" id="yVz-2W-9xG"/>
+                                </constraints>
+                            </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJH-xw-maK">
                                 <rect key="frame" x="163.5" y="318" width="47" height="30"/>
                                 <state key="normal" title="RETRY"/>
                                 <connections>
@@ -30,10 +38,15 @@
                         <constraints>
                             <constraint firstItem="iJH-xw-maK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7hb-jB-lqB"/>
                             <constraint firstItem="iJH-xw-maK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CJv-tz-IH5"/>
+                            <constraint firstItem="qNh-ov-umh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oKr-ev-uvC"/>
+                            <constraint firstItem="qNh-ov-umh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zKK-lE-Sf8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="qZ0-Zl-SDl"/>
+                    <connections>
+                        <outlet property="loadingView" destination="qNh-ov-umh" id="xu6-VY-DXX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
