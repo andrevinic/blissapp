@@ -149,6 +149,7 @@
 		F003416521C9D83400B41912 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				F042579721C71A8F00D09570 /* AppDelegate.swift */,
 				F003416621C9D85E00B41912 /* no_internet_connection.json */,
 				F003416821C9D86300B41912 /* download_icon_success.json */,
 			);
@@ -170,9 +171,9 @@
 				F042579621C71A8F00D09570 /* blissProject */,
 				F04257AB21C71A9000D09570 /* blissProjectTests */,
 				F04257B621C71A9000D09570 /* blissProjectUITests */,
-				F042579521C71A8F00D09570 /* Products */,
-				3B6657F30585A9B6867422A2 /* Pods */,
 				C6529EF66B600ABF5EC2073F /* Frameworks */,
+				3B6657F30585A9B6867422A2 /* Pods */,
+				F042579521C71A8F00D09570 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,15 +190,14 @@
 		F042579621C71A8F00D09570 /* blissProject */ = {
 			isa = PBXGroup;
 			children = (
+				F04257E421C7438000D09570 /* R.generated.swift */,
+				F04257D321C7373600D09570 /* loadscreen */,
+				F04257D721C73E7700D09570 /* questions */,
 				F003416D21CB0F0B00B41912 /* details */,
 				F003416521C9D83400B41912 /* resources */,
 				F04257E621C751AC00D09570 /* extensions */,
-				F04257E421C7438000D09570 /* R.generated.swift */,
-				F04257D721C73E7700D09570 /* questions */,
-				F04257D321C7373600D09570 /* loadscreen */,
 				F04257CA21C71F6300D09570 /* entity */,
 				F04257C521C71E0C00D09570 /* network */,
-				F042579721C71A8F00D09570 /* AppDelegate.swift */,
 				F042579921C71A8F00D09570 /* ViewController.swift */,
 				F042579B21C71A8F00D09570 /* Main.storyboard */,
 				F042579E21C71A9000D09570 /* Assets.xcassets */,
