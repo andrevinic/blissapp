@@ -67,6 +67,9 @@ extension QuestionsViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        guard let detailquestionVC = R.storyboard.details.detailQuestionViewController()
+            else{return}
+        self.navigationController?.pushViewController(detailquestionVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
