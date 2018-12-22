@@ -34,10 +34,10 @@ struct NetworkManager: Networkable{
         }
     }
     
-    func fetchQuestions(completion: @escaping (_ success: [Question], _ error: Error?) -> Void){
+    func fetchQuestions(limit: Int, offset: Int, completion: @escaping (_ success: [Question], _ error: Error?) -> Void){
     
         provider.rx
-        .request(.questions)
+            .request(.questions(limit: limit, offset: offset))
         .subscribe(onSuccess: { (response) in
 
             if let results = try? response.map([Question].self, atKeyPath: nil, using: JSONDecoder(), failsOnEmptyData: true){

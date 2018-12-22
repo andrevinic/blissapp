@@ -11,7 +11,7 @@ import Moya
 
 enum QuestionService{
     
-    case questions
+    case questions(limit: Int, offset: Int)
     case health
 }
 
@@ -63,9 +63,10 @@ extension QuestionService:TargetType{
     var parameters: [String: Any]? {
         switch self{
             
-        case .questions:
+        case .questions(let limit, let offset):
             var parameters = [String: Any]()
-            parameters["limit"] = "30"
+            parameters["limit"] = limit
+            parameters["offset"] = offset
             return parameters
         case .health:
             let parameters = [String: Any]()

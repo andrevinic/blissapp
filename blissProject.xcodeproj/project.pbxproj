@@ -33,7 +33,10 @@
 		F04257E321C742A900D09570 /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257E221C742A900D09570 /* QuestionsViewModel.swift */; };
 		F04257E521C7438100D09570 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257E421C7438000D09570 /* R.generated.swift */; };
 		F04257E821C751C800D09570 /* UIImageView+KingFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257E721C751C800D09570 /* UIImageView+KingFisher.swift */; };
-		F0F4166E21CC65EC00299EE0 /* DetailQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F4166D21CC65EC00299EE0 /* DetailQuestionViewController.swift */; };
+		F0446D5B21CD165B00EECD26 /* QuestionResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0446D5921CD165B00EECD26 /* QuestionResultTableViewCell.swift */; };
+		F0446D5C21CD165B00EECD26 /* QuestionResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0446D5A21CD165B00EECD26 /* QuestionResultTableViewCell.xib */; };
+		F0446D6021CD663B00EECD26 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0446D5F21CD663B00EECD26 /* UIColor.swift */; };
+		F0446D6421CD703700EECD26 /* DetailsResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0446D6321CD703700EECD26 /* DetailsResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +95,12 @@
 		F04257E221C742A900D09570 /* QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewModel.swift; sourceTree = "<group>"; };
 		F04257E421C7438000D09570 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		F04257E721C751C800D09570 /* UIImageView+KingFisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+KingFisher.swift"; sourceTree = "<group>"; };
-		F0F4166D21CC65EC00299EE0 /* DetailQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailQuestionViewController.swift; sourceTree = "<group>"; };
+		F0446D5921CD165B00EECD26 /* QuestionResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionResultTableViewCell.swift; sourceTree = "<group>"; };
+		F0446D5A21CD165B00EECD26 /* QuestionResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionResultTableViewCell.xib; sourceTree = "<group>"; };
+		F0446D5F21CD663B00EECD26 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F0446D6121CD703700EECD26 /* blissProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "blissProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		F0446D6221CD703700EECD26 /* DetailsResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsResultViewController.h; sourceTree = "<group>"; };
+		F0446D6321CD703700EECD26 /* DetailsResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +167,9 @@
 		F003416D21CB0F0B00B41912 /* details */ = {
 			isa = PBXGroup;
 			children = (
-				F0F4166D21CC65EC00299EE0 /* DetailQuestionViewController.swift */,
+				F0446D6221CD703700EECD26 /* DetailsResultViewController.h */,
+				F0446D6321CD703700EECD26 /* DetailsResultViewController.m */,
+				F0446D5821CD164000EECD26 /* views */,
 				F003417021CB105B00B41912 /* details.storyboard */,
 			);
 			path = details;
@@ -190,10 +200,11 @@
 		F042579621C71A8F00D09570 /* blissProject */ = {
 			isa = PBXGroup;
 			children = (
+				F0446D6121CD703700EECD26 /* blissProject-Bridging-Header.h */,
 				F04257E421C7438000D09570 /* R.generated.swift */,
+				F003416D21CB0F0B00B41912 /* details */,
 				F04257D321C7373600D09570 /* loadscreen */,
 				F04257D721C73E7700D09570 /* questions */,
-				F003416D21CB0F0B00B41912 /* details */,
 				F003416521C9D83400B41912 /* resources */,
 				F04257E621C751AC00D09570 /* extensions */,
 				F04257CA21C71F6300D09570 /* entity */,
@@ -284,8 +295,18 @@
 			isa = PBXGroup;
 			children = (
 				F04257E721C751C800D09570 /* UIImageView+KingFisher.swift */,
+				F0446D5F21CD663B00EECD26 /* UIColor.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		F0446D5821CD164000EECD26 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F0446D5921CD165B00EECD26 /* QuestionResultTableViewCell.swift */,
+				F0446D5A21CD165B00EECD26 /* QuestionResultTableViewCell.xib */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +382,7 @@
 				TargetAttributes = {
 					F042579321C71A8F00D09570 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					F04257A721C71A9000D09570 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -402,6 +424,7 @@
 				F042579F21C71A9000D09570 /* Assets.xcassets in Resources */,
 				F04257DB21C73E8D00D09570 /* questions.storyboard in Resources */,
 				F003416721C9D85E00B41912 /* no_internet_connection.json in Resources */,
+				F0446D5C21CD165B00EECD26 /* QuestionResultTableViewCell.xib in Resources */,
 				F04257E021C73F5D00D09570 /* QuestionTableViewCell.xib in Resources */,
 				F042579D21C71A8F00D09570 /* Main.storyboard in Resources */,
 				F003417121CB105B00B41912 /* details.storyboard in Resources */,
@@ -487,27 +510,31 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-blissProject/Pods-blissProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PNChart/PNChart.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PNChart.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,15 +565,17 @@
 			files = (
 				F04257D521C7374600D09570 /* LoadScreenViewController.swift in Sources */,
 				F04257CF21C72E4100D09570 /* NetworkManager.swift in Sources */,
+				F0446D5B21CD165B00EECD26 /* QuestionResultTableViewCell.swift in Sources */,
 				F04257D921C73E8300D09570 /* QuestionsViewController.swift in Sources */,
 				F04257CC21C71F7100D09570 /* Question.swift in Sources */,
 				F04257E821C751C800D09570 /* UIImageView+KingFisher.swift in Sources */,
-				F0F4166E21CC65EC00299EE0 /* DetailQuestionViewController.swift in Sources */,
+				F0446D6021CD663B00EECD26 /* UIColor.swift in Sources */,
 				F04257D221C7300200D09570 /* Choice.swift in Sources */,
 				F04257D021C72E4100D09570 /* QuestionService.swift in Sources */,
 				F04257E321C742A900D09570 /* QuestionsViewModel.swift in Sources */,
 				F04257DF21C73F5D00D09570 /* QuestionTableViewCell.swift in Sources */,
 				F003416421C9CCD900B41912 /* Status.swift in Sources */,
+				F0446D6421CD703700EECD26 /* DetailsResultViewController.m in Sources */,
 				F042579A21C71A8F00D09570 /* ViewController.swift in Sources */,
 				F04257E521C7438100D09570 /* R.generated.swift in Sources */,
 				F042579821C71A8F00D09570 /* AppDelegate.swift in Sources */,
@@ -723,6 +752,7 @@
 			baseConfigurationReference = 2499E55CE817D3D833960A26 /* Pods-blissProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFF7KW2SFY;
 				INFOPLIST_FILE = blissProject/Info.plist;
@@ -730,8 +760,33 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Lottie\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"Rswift\"",
+					"-framework",
+					"\"RxAtomic\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+					"\"-ObjC\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andre.blissProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "blissProject/blissProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -742,6 +797,7 @@
 			baseConfigurationReference = 4817E4892DFE832906771963 /* Pods-blissProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFF7KW2SFY;
 				INFOPLIST_FILE = blissProject/Info.plist;
@@ -749,8 +805,32 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Lottie\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"Rswift\"",
+					"-framework",
+					"\"RxAtomic\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+					"\"-ObjC\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andre.blissProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "blissProject/blissProject-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

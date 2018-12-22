@@ -10,37 +10,65 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail Question View Controller-->
+        <!--Details Result View Controller-->
         <scene sceneID="1TY-mi-Wgd">
             <objects>
-                <viewController storyboardIdentifier="DetailQuestionViewController" id="5Vs-tv-KiX" customClass="DetailQuestionViewController" customModule="blissProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsResultViewController" id="5Vs-tv-KiX" customClass="DetailsResultViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wp0-7s-Sd6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nM-zh-B6i" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="123" y="103" width="128" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2dG-v2-72f">
+                                <rect key="frame" x="45" y="26" width="286" height="91.5"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zs7-bw-aYt">
+                                <rect key="frame" x="45" y="169" width="286" height="429"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1E-Pw-gjO">
+                                        <rect key="frame" x="0.0" y="0.0" width="286" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OhK-fa-z3i">
+                                        <rect key="frame" x="0.0" y="0.0" width="286" height="429"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Pfp-FN-A8b"/>
+                                    <constraint firstAttribute="height" constant="429" id="3OL-AT-DZi"/>
+                                    <constraint firstAttribute="width" constant="286" id="wIY-Ow-3Sv"/>
                                 </constraints>
-                            </view>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Overview" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTA-FD-JJr">
+                                <rect key="frame" x="10" y="136" width="355" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5nM-zh-B6i" firstAttribute="top" secondItem="JLg-F4-4kg" secondAttribute="top" constant="83" id="86A-6I-J6s"/>
-                            <constraint firstItem="5nM-zh-B6i" firstAttribute="leading" secondItem="JLg-F4-4kg" secondAttribute="leading" constant="123" id="ghL-Em-sVD"/>
-                            <constraint firstItem="JLg-F4-4kg" firstAttribute="trailing" secondItem="5nM-zh-B6i" secondAttribute="trailing" constant="124" id="uaF-A6-cOL"/>
+                            <constraint firstItem="JLg-F4-4kg" firstAttribute="trailing" secondItem="2dG-v2-72f" secondAttribute="trailing" constant="44" id="Fb4-xW-7Je"/>
+                            <constraint firstItem="BTA-FD-JJr" firstAttribute="leading" secondItem="JLg-F4-4kg" secondAttribute="leading" constant="10" id="Jkh-Xa-UgU"/>
+                            <constraint firstItem="zs7-bw-aYt" firstAttribute="centerY" secondItem="Wp0-7s-Sd6" secondAttribute="centerY" constant="50" id="TBe-Zb-USb"/>
+                            <constraint firstItem="2dG-v2-72f" firstAttribute="top" secondItem="JLg-F4-4kg" secondAttribute="top" constant="6" id="VcF-va-N26"/>
+                            <constraint firstItem="JLg-F4-4kg" firstAttribute="trailing" secondItem="BTA-FD-JJr" secondAttribute="trailing" constant="10" id="Xvq-9A-nZD"/>
+                            <constraint firstItem="zs7-bw-aYt" firstAttribute="top" secondItem="BTA-FD-JJr" secondAttribute="bottom" constant="13" id="cbk-St-smC"/>
+                            <constraint firstItem="2dG-v2-72f" firstAttribute="leading" secondItem="JLg-F4-4kg" secondAttribute="leading" constant="45" id="gLb-jB-Art"/>
+                            <constraint firstItem="BTA-FD-JJr" firstAttribute="top" secondItem="2dG-v2-72f" secondAttribute="bottom" constant="18" id="i1G-pT-M4B"/>
+                            <constraint firstItem="zs7-bw-aYt" firstAttribute="centerX" secondItem="Wp0-7s-Sd6" secondAttribute="centerX" id="mu1-2F-YKj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JLg-F4-4kg"/>
                     </view>
                     <connections>
-                        <outlet property="barChartView" destination="5nM-zh-B6i" id="SHf-Xx-Sew"/>
+                        <outlet property="detailChart" destination="P1E-Pw-gjO" id="OsO-bk-hyP"/>
+                        <outlet property="imageQuestion" destination="2dG-v2-72f" id="9JU-hf-R8Q"/>
+                        <outlet property="questionOverview" destination="BTA-FD-JJr" id="REp-aK-cTI"/>
+                        <outlet property="tableView" destination="OhK-fa-z3i" id="tIq-NK-yY9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIP-8l-nM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-828" y="-71"/>
+            <point key="canvasLocation" x="-828" y="-71.514242878560722"/>
         </scene>
     </scenes>
 </document>

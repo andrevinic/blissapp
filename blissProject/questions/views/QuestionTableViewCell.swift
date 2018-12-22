@@ -9,6 +9,7 @@
 import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var imageQuestion: UIImageView!
     @IBOutlet weak var questionField: UILabel!
     
