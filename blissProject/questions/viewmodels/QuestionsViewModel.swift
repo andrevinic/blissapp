@@ -12,6 +12,12 @@ class QuestionsViewModel: NSObject {
 
     let questionDataManager = QuestionDataManager.shared
     
+    func fetchQuestion(id: Int, completion: @escaping (_ question: Question, _ error: Error?) -> Void){
+        questionDataManager.fetchQuestion(id: id) { (question, error) in
+            completion(question, error)
+        }
+    }
+    
     func fetchQuestions(completion: @escaping (_ success: Bool, _ error: Error?) -> Void){
         
         questionDataManager.fetchQuestions { (success, error) in

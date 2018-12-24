@@ -12,6 +12,7 @@ import Moya
 enum QuestionService{
     
     case questions(limit: Int, offset: Int)
+    case question(question_id: Int)
     case health
     case vote(question_id: Int)
 }
@@ -20,6 +21,9 @@ extension QuestionService:TargetType{
     
     var headers: [String : String]? {
         switch self{
+        case .question:
+            let parameters = [String: String]()
+            return parameters
         case .questions:
             let parameters = [String: String]()
             return parameters
@@ -44,6 +48,9 @@ extension QuestionService:TargetType{
     var path: String{
         
         switch self{
+            
+        case .question(let question_id):
+            return "/questions/\(question_id)"
         case .questions:
             return "/questions"
         case .health:
@@ -58,6 +65,8 @@ extension QuestionService:TargetType{
     var method: Moya.Method{
         
         switch self {
+        case .question:
+            return .get
         case .questions:
             return .get
         case .health:
@@ -69,7 +78,9 @@ extension QuestionService:TargetType{
     
     var parameters: [String: Any]? {
         switch self{
-            
+        case .question:
+            let parameters = [String: Any]()
+            return parameters
         case .questions(let limit, let offset):
             var parameters = [String: Any]()
             parameters["limit"] = limit

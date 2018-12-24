@@ -20,6 +20,12 @@ class QuestionDataManager: NSObject {
         return questions.count
     }
     
+    func fetchQuestion(id: Int, completion: @escaping (_ question: Question, _ error: Error?) -> Void){
+        NetworkManager.shared.fetchQuestion(id: id) { (question, error) in
+            completion(question, nil)
+        }
+    }
+    
     func fetchQuestions(completion: @escaping (_ success: Bool, _ error: Error?) -> Void){
         
         NetworkManager.shared.fetchQuestions(limit: limit, offset: offset)  { (questions, error) in

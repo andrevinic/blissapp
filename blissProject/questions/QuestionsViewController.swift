@@ -81,20 +81,28 @@ extension QuestionsViewController: UITableViewDataSource{
 extension QuestionsViewController: UITableViewDelegate{
     
     func didSelectConfig(question: Question, detailsResultViewController: DetailsResultViewController){
-        let choices = question.choices
         
-        var array1: [String] = []
-        var array2: [NSNumber] = []
-        for choice in choices{
-            array1.append(choice.choice)
-            array2.append(NSNumber(value: choice.votes))
+        self.questionsViewModel.fetchQuestion(id: question.id) { (question, error) in
+            if(error == nil){
+                let choices = question.choices
+                
+                var array1: [String] = []
+                var array2: [NSNumber] = []
+                for choice in choices{
+                    array1.append(choice.choice)
+                    array2.append(NSNumber(value: choice.votes))
+                }
+                
+                detailsResultViewController.choices_description = array1
+                detailsResultViewController.choices_values = array2
+                detailsResultViewController.image_question_url = question.image_url
+                detailsResultViewController.question_overview = question.question
+                self.navigationController?.pushViewController(detailsResultViewController, animated: true)
+            }else{
+                fatalError("Couldn't fetch this question")
+            }
         }
         
-        detailsResultViewController.choices_description = array1
-        detailsResultViewController.choices_values = array2
-        detailsResultViewController.image_question_url = question.image_url
-        detailsResultViewController.question_overview = question.question
-        self.navigationController?.pushViewController(detailsResultViewController, animated: true)
     }
     
     //MARK: UITableViewDelegate
