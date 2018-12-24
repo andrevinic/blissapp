@@ -8,38 +8,35 @@
 
 import UIKit
 import Lottie
+import SnapKit
 
 class LoadScreenViewController: UIViewController {
     let animationView = LOTAnimationView(name: "download_icon_success")
+    let animationView_withoutInternet = LOTAnimationView(name: "no_internet_connection")
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var retryConnectionButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        let size = CGSize(width: 40.0, height: 28.0)
-//
-//        self.animationView.sizeThatFits(size)
-//        animationView.contentMode = .scaleAspectFill
-//        animationView.frame = CGRect(x: 100, y: 150, width: 200, height: 200)
-//        animationView.addConstraint(NSLayoutConstraint(item: view, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
-//        animationView.addConstraint(NSLayoutConstraint(item: view, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
-
-//        self.animationView.layoutSubviews()
-//        self.animationView.layoutIfNeeded()
-//        self.view.addSubview(animationView)
+        self.setupConnectingAnimation()
+        self.setupNoConnectionAnimation()
+        self.handleConnectingAnimation()
        
-
-        fetchHealth()
     }
-
+    
     func fetchHealth(){
-//        animationView.play(fromProgress: 0, toProgress: 0.5, withCompletion: nil)
+        
         NetworkManager.shared.fetchHealth { (success, error) in
             switch success{
             case true:
                 self.buildQuestionsViewController()
                 print("STATUS OK")
             case false:
+                self.handleNoInternet()
                 print("STATUS NOT OK")
             }
         }
@@ -57,18 +54,57 @@ class LoadScreenViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-
     @IBAction func retryConnection(_ sender: Any) {
-        self.fetchHealth()
+        self.handleConnectingAnimation()
     }
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension LoadScreenViewController:LoadScreenAnimation{
+    func setupConnectingAnimation(){
+        animationView.contentMode = .scaleAspectFill
+        self.view.addSubview(animationView)
+        self.animationView.snp.makeConstraints { (make) in
+            make.centerY.equalTo(self.view.snp.centerY)
+            make.centerX.equalTo(self.view.snp.centerX)
+        }
     }
-    */
-
+    func handleConnectingAnimation(){
+        self.animationView.isHidden = false
+        self.animationView_withoutInternet.isHidden = true
+        retryConnectionButton.isHidden = true
+        
+        animationView.animationSpeed = 2.0
+        
+        animationView.play{ (finished) in
+            
+            self.fetchHealth()
+        }
+    }
+    
+    func setupNoConnectionAnimation(){
+        animationView_withoutInternet.contentMode = .scaleAspectFill
+        self.view.addSubview(animationView_withoutInternet)
+        animationView_withoutInternet.snp.makeConstraints { (make) in
+            make.centerY.equalTo(self.view.snp.centerY)
+            make.centerX.equalTo(self.view.snp.centerX)
+        }
+    }
+    
+    func handleNoInternet(){
+        self.animationView.stop()
+        self.animationView.isHidden = true
+        self.animationView_withoutInternet.isHidden = false
+        self.retryConnectionButton.isHidden = false
+        
+        self.retryConnectionButton.snp.makeConstraints { (make) in
+            make.top.equalTo(animationView_withoutInternet.snp.top).offset(-30)
+            make.centerX.equalTo(self.view.snp.centerX)
+            
+        }
+        
+        animationView_withoutInternet.animationSpeed = 2.0
+        animationView_withoutInternet.play{ (finished) in
+            
+        }
+    }
 }

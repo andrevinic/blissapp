@@ -15,6 +15,8 @@ target 'blissProject' do
     pod 'PNChart'
     pod 'SDWebImage', '~> 4.0'
     pod 'Masonry'
+    pod 'SnapKit', '~> 4.0.0'
+
     pod 'ReachabilitySwift'
     pod 'SwiftMessages',  '5.0.1'
 

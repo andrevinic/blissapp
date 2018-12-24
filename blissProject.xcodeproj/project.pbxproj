@@ -47,6 +47,7 @@
 		F0EB45DD21D13BCF0068D7BD /* PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EB45DB21D13BCF0068D7BD /* PopupViewController.m */; };
 		F0EB45DE21D13BCF0068D7BD /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0EB45DC21D13BCF0068D7BD /* PopupViewController.xib */; };
 		F0EB45E221D141DA0068D7BD /* PopupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EB45E121D141DA0068D7BD /* PopupViewModel.m */; };
+		F0EB45E521D1A20E0068D7BD /* LoadScreenAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB45E421D1A20E0068D7BD /* LoadScreenAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		F0EB45DC21D13BCF0068D7BD /* PopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupViewController.xib; sourceTree = "<group>"; };
 		F0EB45E021D141DA0068D7BD /* PopupViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopupViewModel.h; sourceTree = "<group>"; };
 		F0EB45E121D141DA0068D7BD /* PopupViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupViewModel.m; sourceTree = "<group>"; };
+		F0EB45E421D1A20E0068D7BD /* LoadScreenAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadScreenAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +199,7 @@
 			children = (
 				F0EB45D321D13B470068D7BD /* share */,
 				F056F07121D1121900402795 /* viewmodel */,
-				F029D53921D04F1A0063FCC9 /* category */,
+				F029D53921D04F1A0063FCC9 /* builder */,
 				F0446D6221CD703700EECD26 /* DetailsResultViewController.h */,
 				F0446D6321CD703700EECD26 /* DetailsResultViewController.m */,
 				F0446D5821CD164000EECD26 /* views */,
@@ -216,13 +218,13 @@
 			path = charts;
 			sourceTree = "<group>";
 		};
-		F029D53921D04F1A0063FCC9 /* category */ = {
+		F029D53921D04F1A0063FCC9 /* builder */ = {
 			isa = PBXGroup;
 			children = (
 				F029D53D21D04F3E0063FCC9 /* DetailsResultViewController+BuildChart.h */,
 				F029D53E21D04F3E0063FCC9 /* DetailsResultViewController+BuildChart.m */,
 			);
-			path = category;
+			path = builder;
 			sourceTree = "<group>";
 		};
 		F029D54021D067300063FCC9 /* reachability */ = {
@@ -317,6 +319,7 @@
 		F04257D321C7373600D09570 /* loadscreen */ = {
 			isa = PBXGroup;
 			children = (
+				F0EB45E321D1A1FF0068D7BD /* protocol */,
 				F04257D421C7374600D09570 /* LoadScreenViewController.swift */,
 			);
 			path = loadscreen;
@@ -421,6 +424,14 @@
 				F0EB45E121D141DA0068D7BD /* PopupViewModel.m */,
 			);
 			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		F0EB45E321D1A1FF0068D7BD /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F0EB45E421D1A20E0068D7BD /* LoadScreenAnimation.swift */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,6 +646,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
@@ -652,6 +664,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
@@ -691,6 +704,7 @@
 				F04257D921C73E8300D09570 /* QuestionsViewController.swift in Sources */,
 				F04257CC21C71F7100D09570 /* Question.swift in Sources */,
 				F04257E821C751C800D09570 /* UIImageView+SDWebImage.swift in Sources */,
+				F0EB45E521D1A20E0068D7BD /* LoadScreenAnimation.swift in Sources */,
 				F0446D6021CD663B00EECD26 /* UIColor.swift in Sources */,
 				F029D54421D06AB10063FCC9 /* NetworkStatusListener.swift in Sources */,
 				F056F07021D10BE800402795 /* QuestionDataManager.swift in Sources */,
