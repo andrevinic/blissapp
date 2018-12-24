@@ -16,6 +16,7 @@ target 'blissProject' do
     pod 'SDWebImage', '~> 4.0'
     pod 'Masonry'
     pod 'ReachabilitySwift'
+    pod 'SwiftMessages',  '5.0.1'
 
     target 'blissProjectTests' do
         inherit! :search_paths

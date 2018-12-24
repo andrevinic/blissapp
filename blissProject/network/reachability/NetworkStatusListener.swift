@@ -9,6 +9,6 @@
 import Foundation
 import Reachability
 
-public protocol NetworkStatusListener : class {
+public protocol NetworkStatusListener: class {
     func networkStatusDidChange(status: Reachability.Connection)
 }

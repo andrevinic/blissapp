@@ -11,7 +11,7 @@ import UIKit
 class QuestionsViewModel: NSObject {
 
     public var questions: [Question] = []
-    var limit = 30
+    var limit = 10
     var offset = 0
     
     func fetchQuestions(completion: @escaping (_ success: Bool, _ error: Error?) -> Void){

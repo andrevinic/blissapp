@@ -8,6 +8,7 @@
 
 import UIKit
 import Reachability
+import SwiftMessages
 
 class QuestionsViewController: UIViewController {
     
@@ -121,17 +122,14 @@ extension QuestionsViewController: NetworkStatusListener {
         
         switch status {
         case .none:
-            let alert = UIAlertController(title: "Connection", message: "There is no connection", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            debugPrint("ViewController: Network became unreachable")
+            SwiftMessageManager.shared.showMessageNoInternet()
         case .wifi:
-            debugPrint("ViewController: Network reachable through WiFi")
+            SwiftMessageManager.shared.hideMessageInternet()
         case .cellular:
-            debugPrint("ViewController: Network reachable through Cellular Data")
+            SwiftMessageManager.shared.hideMessageInternet()
+
         }
 
     }
-    
     
 }
