@@ -68,6 +68,4 @@ class ReachabilityManager: NSObject {
     func removeListener(listener: NetworkStatusListener){
         listeners = listeners.filter{ $0 !== listener}
     }
-    
-    
 }

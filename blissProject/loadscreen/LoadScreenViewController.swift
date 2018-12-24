@@ -34,10 +34,8 @@ class LoadScreenViewController: UIViewController {
             switch success{
             case true:
                 self.buildQuestionsViewController()
-                print("STATUS OK")
             case false:
                 self.handleNoInternet()
-                print("STATUS NOT OK")
             }
         }
     }

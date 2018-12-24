@@ -51,12 +51,7 @@ class QuestionDataManager: NSObject {
                 completion(true, nil)
             }
             completion(false, nil)
-            
-            //    debugPrint(success)
         }
         
     }
 }
-
-
-
