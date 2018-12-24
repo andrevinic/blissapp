@@ -11,6 +11,6 @@
 @protocol RelatedQuestionDelegate <NSObject>
 
 @required
--(void)didSelectRelatedQuestiont:(NSIndexPath *)indexPath;
+-(void)didSelectRelatedQuestion:(NSIndexPath *)indexPath;
 
 @end

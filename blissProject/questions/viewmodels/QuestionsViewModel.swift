@@ -10,28 +10,16 @@ import UIKit
 
 class QuestionsViewModel: NSObject {
 
-    public var questions: [Question] = []
-    var limit = 10
-    var offset = 0
+    let questionDataManager = QuestionDataManager.shared
     
     func fetchQuestions(completion: @escaping (_ success: Bool, _ error: Error?) -> Void){
-
-        NetworkManager.shared.fetchQuestions(limit: limit, offset: offset)  { (questions, error) in
-            self.questions.append(contentsOf: questions)
-            completion(true, nil)
-            self.offset += self.limit
-            print("FETCHED \(questions)")
+        
+        questionDataManager.fetchQuestions { (success, error) in
+            completion(success, error)
         }
     }
-}
-
-extension QuestionsViewModel:RelatedQuestionDelegate{
     
-    func didSelectRelatedQuestiont(_ indexPath: IndexPath!) {
-        let index = indexPath.row
-        let question = self.questions[index]
-        NetworkManager.shared.vote(question_id: question.id)
+    func questionsLength()->Int{
+        return self.questionDataManager.questionsLength()
     }
-    
-    
 }

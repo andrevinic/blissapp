@@ -26,7 +26,6 @@ struct NetworkManager: Networkable{
             
             switch result {
             case let .success(moyaResponse):
-                print(moyaResponse)
                 completion(true, nil)
             case let .failure(error):
                 completion(false, error)
@@ -54,7 +53,6 @@ struct NetworkManager: Networkable{
         provider.rx
         .request(.vote(question_id: question_id))
             .subscribe(onSuccess: { (result) in
-                print(result)
             }) { (error) in
                 debugPrint(error)
         }

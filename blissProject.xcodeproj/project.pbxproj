@@ -41,6 +41,8 @@
 		F0446D5C21CD165B00EECD26 /* QuestionResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0446D5A21CD165B00EECD26 /* QuestionResultTableViewCell.xib */; };
 		F0446D6021CD663B00EECD26 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0446D5F21CD663B00EECD26 /* UIColor.swift */; };
 		F0446D6421CD703700EECD26 /* DetailsResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0446D6321CD703700EECD26 /* DetailsResultViewController.m */; };
+		F056F07021D10BE800402795 /* QuestionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056F06F21D10BE800402795 /* QuestionDataManager.swift */; };
+		F056F07421D1122B00402795 /* DetailsResultViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F056F07321D1122B00402795 /* DetailsResultViewModel.m */; };
 		F0EAED2D21D0FB6D0067FB27 /* SwiftMessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EAED2C21D0FB6D0067FB27 /* SwiftMessageManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,9 @@
 		F0446D6221CD703700EECD26 /* DetailsResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsResultViewController.h; sourceTree = "<group>"; };
 		F0446D6321CD703700EECD26 /* DetailsResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsResultViewController.m; sourceTree = "<group>"; };
 		F054413C21CEF3CB0002045A /* RelatedQuestionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RelatedQuestionDelegate.h; sourceTree = "<group>"; };
+		F056F06F21D10BE800402795 /* QuestionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDataManager.swift; sourceTree = "<group>"; };
+		F056F07221D1122B00402795 /* DetailsResultViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsResultViewModel.h; sourceTree = "<group>"; };
+		F056F07321D1122B00402795 /* DetailsResultViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsResultViewModel.m; sourceTree = "<group>"; };
 		F0EAED2C21D0FB6D0067FB27 /* SwiftMessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +185,7 @@
 		F003416D21CB0F0B00B41912 /* details */ = {
 			isa = PBXGroup;
 			children = (
+				F056F07121D1121900402795 /* viewmodel */,
 				F029D53921D04F1A0063FCC9 /* category */,
 				F0446D6221CD703700EECD26 /* DetailsResultViewController.h */,
 				F0446D6321CD703700EECD26 /* DetailsResultViewController.m */,
@@ -310,6 +316,7 @@
 		F04257D721C73E7700D09570 /* questions */ = {
 			isa = PBXGroup;
 			children = (
+				F056F06E21D10BD700402795 /* managers */,
 				F04257E121C7429500D09570 /* viewmodels */,
 				F04257DC21C73F4900D09570 /* views */,
 				F04257D821C73E8300D09570 /* QuestionsViewController.swift */,
@@ -351,6 +358,23 @@
 				F0446D5A21CD165B00EECD26 /* QuestionResultTableViewCell.xib */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		F056F06E21D10BD700402795 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				F056F06F21D10BE800402795 /* QuestionDataManager.swift */,
+			);
+			path = managers;
+			sourceTree = "<group>";
+		};
+		F056F07121D1121900402795 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				F056F07221D1122B00402795 /* DetailsResultViewModel.h */,
+				F056F07321D1122B00402795 /* DetailsResultViewModel.m */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 		F07A9FA921D06F3E009FDC42 /* moya */ = {
@@ -639,6 +663,7 @@
 				F04257E821C751C800D09570 /* UIImageView+SDWebImage.swift in Sources */,
 				F0446D6021CD663B00EECD26 /* UIColor.swift in Sources */,
 				F029D54421D06AB10063FCC9 /* NetworkStatusListener.swift in Sources */,
+				F056F07021D10BE800402795 /* QuestionDataManager.swift in Sources */,
 				F04257D221C7300200D09570 /* Choice.swift in Sources */,
 				F04257D021C72E4100D09570 /* QuestionService.swift in Sources */,
 				F04257E321C742A900D09570 /* QuestionsViewModel.swift in Sources */,
@@ -648,6 +673,7 @@
 				F0446D6421CD703700EECD26 /* DetailsResultViewController.m in Sources */,
 				F042579A21C71A8F00D09570 /* ViewController.swift in Sources */,
 				F04257E521C7438100D09570 /* R.generated.swift in Sources */,
+				F056F07421D1122B00402795 /* DetailsResultViewModel.m in Sources */,
 				F042579821C71A8F00D09570 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

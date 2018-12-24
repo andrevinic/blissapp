@@ -8,6 +8,7 @@
 @import UIKit;
 #import "RelatedQuestionDelegate.h"
 #import "ChartsBuilder.h"
+#import "DetailsResultViewModel.h"
 
 @interface DetailsResultViewController : UIViewController
 
@@ -17,9 +18,9 @@
 
 @property (nonatomic) NSString *image_question_url;
 @property (nonatomic) NSString *question_overview;
-@property (weak, nonatomic) id<RelatedQuestionDelegate> questionDelegate;
 @property (nonatomic) NSArray<NSNumber *> *choices_values;
 @property (nonatomic) NSArray<NSString *> *choices_description;
 @property (strong, nonatomic) ChartsBuilder *chartsBuilder;
+@property (nonatomic) DetailsResultViewModel *detailsResultViewModel;
 
 @end

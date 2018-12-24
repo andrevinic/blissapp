@@ -12,8 +12,8 @@ import SwiftMessages
 
 class QuestionsViewController: UIViewController {
     
-    let viewModel = QuestionsViewModel()
-
+    let questionsViewModel = QuestionsViewModel()
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet{
             tableView.delegate = self
@@ -23,7 +23,7 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(R.nib.questionTableViewCell)
-        fetch()
+        fetchQuestions()
         
     }
     
@@ -36,9 +36,11 @@ class QuestionsViewController: UIViewController {
         ReachabilityManager.shared.removeListener(listener: self)
 
     }
-    func fetch(){
-        self.viewModel.fetchQuestions { (success, error) in
+    func fetchQuestions(){
+        
+        questionsViewModel.fetchQuestions { (success, error) in
             self.tableView.reloadData()
+
         }
     }
     
@@ -55,7 +57,7 @@ extension QuestionsViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.questions.count
+        return questionsViewModel.questionDataManager.questionsLength()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,22 +72,15 @@ extension QuestionsViewController: UITableViewDataSource{
     }
     
     func configureCell(cell: QuestionTableViewCell, forRowAt indexPath: IndexPath) {
-        let question = viewModel.questions[indexPath.row]
-        
+        let question = questionsViewModel.questionDataManager.questions[indexPath.row]
+        cell.selectionStyle = .none
         cell.configureCell(imageQuestion: question.thumb_url, questionField: question.question)
     }
 }
 
 extension QuestionsViewController: UITableViewDelegate{
     
-    //MARK: UITableViewDelegate
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        guard let detailquestionVC = R.storyboard.details.detailsResultViewController()
-            else{return}
-        
-        let question = self.viewModel.questions[indexPath.row]
+    func didSelectConfig(question: Question, detailsResultViewController: DetailsResultViewController){
         let choices = question.choices
         
         var array1: [String] = []
@@ -95,12 +90,23 @@ extension QuestionsViewController: UITableViewDelegate{
             array2.append(NSNumber(value: choice.votes))
         }
         
-        detailquestionVC.choices_description = array1
-        detailquestionVC.choices_values = array2
-        detailquestionVC.image_question_url = question.image_url
-        detailquestionVC.question_overview = question.question
-        detailquestionVC.questionDelegate = self.viewModel
-        self.navigationController?.pushViewController(detailquestionVC, animated: true)
+        detailsResultViewController.choices_description = array1
+        detailsResultViewController.choices_values = array2
+        detailsResultViewController.image_question_url = question.image_url
+        detailsResultViewController.question_overview = question.question
+        self.navigationController?.pushViewController(detailsResultViewController, animated: true)
+    }
+    
+    //MARK: UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let detailquestionVC = R.storyboard.details.detailsResultViewController()
+            else{return}
+        
+        let question = questionsViewModel.questionDataManager.questions[indexPath.row]
+        self.didSelectConfig(question: question, detailsResultViewController: detailquestionVC)
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -110,8 +116,8 @@ extension QuestionsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let index = indexPath.row
         
-        if index == self.viewModel.questions.count - 1 {
-            fetch()
+        if index == self.questionsViewModel.questionDataManager.questions.count - 1 {
+            fetchQuestions()
         }
     }
 }

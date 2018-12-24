@@ -21,7 +21,7 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.chartsBuilder = [ChartsBuilder new];
-
+    self.detailsResultViewModel = [DetailsResultViewModel new];
     [self.tableView registerNib:[UINib nibWithNibName:@"QuestionResultTableViewCell" bundle:nil] forCellReuseIdentifier:@"QuestionResultTableViewCell"];
     
     [self.tableView reloadData];
@@ -94,7 +94,7 @@
     [self buildPieChart];
     [self buildBarChart];
     [self buildRadarChart];
-    [self.questionDelegate didSelectRelatedQuestiont:indexPath];
+    [self.detailsResultViewModel fetchVote:indexPath];
 }
 
 
