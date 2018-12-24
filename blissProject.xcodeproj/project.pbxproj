@@ -19,7 +19,6 @@
 		F029D54221D067540063FCC9 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F029D54121D067540063FCC9 /* ReachabilityManager.swift */; };
 		F029D54421D06AB10063FCC9 /* NetworkStatusListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F029D54321D06AB10063FCC9 /* NetworkStatusListener.swift */; };
 		F042579821C71A8F00D09570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042579721C71A8F00D09570 /* AppDelegate.swift */; };
-		F042579A21C71A8F00D09570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042579921C71A8F00D09570 /* ViewController.swift */; };
 		F042579D21C71A8F00D09570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F042579B21C71A8F00D09570 /* Main.storyboard */; };
 		F042579F21C71A9000D09570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F042579E21C71A9000D09570 /* Assets.xcassets */; };
 		F04257A221C71A9000D09570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04257A021C71A9000D09570 /* LaunchScreen.storyboard */; };
@@ -39,7 +38,6 @@
 		F04257E821C751C800D09570 /* UIImageView+SDWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04257E721C751C800D09570 /* UIImageView+SDWebImage.swift */; };
 		F0446D5B21CD165B00EECD26 /* QuestionResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0446D5921CD165B00EECD26 /* QuestionResultTableViewCell.swift */; };
 		F0446D5C21CD165B00EECD26 /* QuestionResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0446D5A21CD165B00EECD26 /* QuestionResultTableViewCell.xib */; };
-		F0446D6021CD663B00EECD26 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0446D5F21CD663B00EECD26 /* UIColor.swift */; };
 		F0446D6421CD703700EECD26 /* DetailsResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0446D6321CD703700EECD26 /* DetailsResultViewController.m */; };
 		F056F07021D10BE800402795 /* QuestionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056F06F21D10BE800402795 /* QuestionDataManager.swift */; };
 		F056F07421D1122B00402795 /* DetailsResultViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F056F07321D1122B00402795 /* DetailsResultViewModel.m */; };
@@ -89,7 +87,6 @@
 		F029D54321D06AB10063FCC9 /* NetworkStatusListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusListener.swift; sourceTree = "<group>"; };
 		F042579421C71A8F00D09570 /* blissProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blissProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F042579721C71A8F00D09570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F042579921C71A8F00D09570 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F042579C21C71A8F00D09570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F042579E21C71A9000D09570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F04257A121C71A9000D09570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +111,6 @@
 		F04257E721C751C800D09570 /* UIImageView+SDWebImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SDWebImage.swift"; sourceTree = "<group>"; };
 		F0446D5921CD165B00EECD26 /* QuestionResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionResultTableViewCell.swift; sourceTree = "<group>"; };
 		F0446D5A21CD165B00EECD26 /* QuestionResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionResultTableViewCell.xib; sourceTree = "<group>"; };
-		F0446D5F21CD663B00EECD26 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		F0446D6121CD703700EECD26 /* blissProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "blissProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		F0446D6221CD703700EECD26 /* DetailsResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsResultViewController.h; sourceTree = "<group>"; };
 		F0446D6321CD703700EECD26 /* DetailsResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsResultViewController.m; sourceTree = "<group>"; };
@@ -264,7 +260,6 @@
 				F0446D6121CD703700EECD26 /* blissProject-Bridging-Header.h */,
 				F04257A321C71A9000D09570 /* Info.plist */,
 				F04257E421C7438000D09570 /* R.generated.swift */,
-				F042579921C71A8F00D09570 /* ViewController.swift */,
 				F042579E21C71A9000D09570 /* Assets.xcassets */,
 				F029D53521D0476E0063FCC9 /* charts */,
 				F003416D21CB0F0B00B41912 /* details */,
@@ -358,7 +353,6 @@
 			isa = PBXGroup;
 			children = (
 				F04257E721C751C800D09570 /* UIImageView+SDWebImage.swift */,
-				F0446D5F21CD663B00EECD26 /* UIColor.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -705,7 +699,6 @@
 				F04257CC21C71F7100D09570 /* Question.swift in Sources */,
 				F04257E821C751C800D09570 /* UIImageView+SDWebImage.swift in Sources */,
 				F0EB45E521D1A20E0068D7BD /* LoadScreenAnimation.swift in Sources */,
-				F0446D6021CD663B00EECD26 /* UIColor.swift in Sources */,
 				F029D54421D06AB10063FCC9 /* NetworkStatusListener.swift in Sources */,
 				F056F07021D10BE800402795 /* QuestionDataManager.swift in Sources */,
 				F04257D221C7300200D09570 /* Choice.swift in Sources */,
@@ -716,7 +709,6 @@
 				F003416421C9CCD900B41912 /* Status.swift in Sources */,
 				F0EAED2D21D0FB6D0067FB27 /* SwiftMessageManager.swift in Sources */,
 				F0446D6421CD703700EECD26 /* DetailsResultViewController.m in Sources */,
-				F042579A21C71A8F00D09570 /* ViewController.swift in Sources */,
 				F04257E521C7438100D09570 /* R.generated.swift in Sources */,
 				F056F07421D1122B00402795 /* DetailsResultViewModel.m in Sources */,
 				F042579821C71A8F00D09570 /* AppDelegate.swift in Sources */,
