@@ -11,11 +11,11 @@ target 'blissProject' do
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
     pod 'R.swift',    '<= 3.0'
-    pod 'Kingfisher', '<= 4.0'
     pod 'lottie-ios'
     pod 'PNChart'
     pod 'SDWebImage', '~> 4.0'
-
+    pod 'Masonry'
+    
     target 'blissProjectTests' do
         inherit! :search_paths
         # Pods for testing

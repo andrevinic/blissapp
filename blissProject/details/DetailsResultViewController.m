@@ -9,9 +9,9 @@
 #import <PNChart/PNChart.h>
 #import "blissProject-Swift.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "DetailsResultViewController+BuildChart.h"
 
 @interface DetailsResultViewController()<UITableViewDelegate, UITableViewDataSource>
-
 @end
 
 @implementation DetailsResultViewController
@@ -20,33 +20,21 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.chartsBuilder = [ChartsBuilder new];
+
     [self.tableView registerNib:[UINib nibWithNibName:@"QuestionResultTableViewCell" bundle:nil] forCellReuseIdentifier:@"QuestionResultTableViewCell"];
-    //For Pie Chart
+    
     [self.tableView reloadData];
-    self.questionOverview.text = self.question_overview;
     [self.imageQuestion sd_setImageWithURL:[NSURL URLWithString:self.image_question_url]];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    self.tableView.hidden = NO;
+    self.detailChart.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (UIColor *)randomColor{
-    int r = arc4random_uniform(6);
-    switch (r) {
-        case 1:
-            return PNRed;
-        case 2:
-            return PNBlue;
-        case 3:
-            return PNGrey;
-        case 4:
-            return PNBrown;
-        case 5:
-            return PNGreen;
-        default:
-            return PNBlack;
-    }
 }
 
 - (void)configureCell:(QuestionResultTableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
@@ -82,24 +70,33 @@
     return 100;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
+    [label setFont:[UIFont boldSystemFontOfSize:15]];
+    NSString *string = self.question_overview;
+    /* Section header is in 0th index... */
+    [label setText:string];
+    [view addSubview:label];
+    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]];
+    return view;
+}
+
 @end
 
 @implementation DetailsResultViewController (UITableViewDelegate)
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    self.tableView.hidden = true;
-    self.detailChart.hidden = false;
-    NSMutableArray *items = [NSMutableArray new];
-
-    for (int i = 0; i < _choices_values.count; i++) {
-        [items addObject: [PNPieChartDataItem dataItemWithValue:[_choices_values[i] floatValue] color:[self randomColor] description:_choices_description[i]]];
-    }
-    PNPieChart *pieChart = [[PNPieChart alloc]  initWithFrame:CGRectMake(0, 0, 200, 200) items:items];
+    self.tableView.hidden = YES;
+    self.detailChart.hidden = NO;
     
-    pieChart.descriptionTextColor = [UIColor whiteColor];
-    pieChart.descriptionTextFont  = [UIFont fontWithName:@"Avenir-Medium" size:14.0];
-    [pieChart strokeChart];
-    [_detailChart addSubview:pieChart];
-
+    [self buildPieChart];
+    [self buildBarChart];
+    [self buildRadarChart];
+    [self.questionDelegate didSelectRelatedQuestiont:indexPath];
 }
+
+
 @end
+

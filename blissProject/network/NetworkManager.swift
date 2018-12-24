@@ -49,4 +49,14 @@ struct NetworkManager: Networkable{
             debugPrint(error)
         }
     }
+    
+    func vote(question_id: Int){
+        provider.rx
+        .request(.vote(question_id: question_id))
+            .subscribe(onSuccess: { (result) in
+                print(result)
+            }) { (error) in
+                debugPrint(error)
+        }
+    }
 }

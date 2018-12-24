@@ -9,7 +9,7 @@
 import UIKit
 
 class QuestionsViewController: UIViewController {
-
+    
     let viewModel = QuestionsViewModel()
     
     @IBOutlet weak var tableView: UITableView! {
@@ -29,11 +29,11 @@ class QuestionsViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
 }
 
 extension QuestionsViewController: UITableViewDataSource{
@@ -49,15 +49,19 @@ extension QuestionsViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionTableViewCell.identifier, for: indexPath) as! QuestionTableViewCell
-        configureCell(cell: cell, forRowAt: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionTableViewCell.identifier, for: indexPath)
+            
+        if let cellQuestion = cell as? QuestionTableViewCell {
+            configureCell(cell: cellQuestion, forRowAt: indexPath)
+        }
+        
         return cell
     }
     
     func configureCell(cell: QuestionTableViewCell, forRowAt indexPath: IndexPath) {
         let question = viewModel.questions[indexPath.row]
         
-        cell.configureCell(imageQuestion: question.image_url, questionField: question.question)
+        cell.configureCell(imageQuestion: question.thumb_url, questionField: question.question)
     }
 }
 
@@ -69,10 +73,9 @@ extension QuestionsViewController: UITableViewDelegate{
         
         guard let detailquestionVC = R.storyboard.details.detailsResultViewController()
             else{return}
-       
-       let question = self.viewModel.questions[indexPath.row]
+        
+        let question = self.viewModel.questions[indexPath.row]
         let choices = question.choices
-//        detailquestionVC.choices = choices
         
         var array1: [String] = []
         var array2: [NSNumber] = []
@@ -85,6 +88,7 @@ extension QuestionsViewController: UITableViewDelegate{
         detailquestionVC.choices_values = array2
         detailquestionVC.image_question_url = question.image_url
         detailquestionVC.question_overview = question.question
+        detailquestionVC.questionDelegate = self.viewModel
         self.navigationController?.pushViewController(detailquestionVC, animated: true)
     }
     

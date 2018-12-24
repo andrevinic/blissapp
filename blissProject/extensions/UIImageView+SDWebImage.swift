@@ -8,12 +8,13 @@
 
 import Foundation
 import Kingfisher
+import SDWebImage
 
 extension UIImageView {
     func download(image url: String, placeholder: UIImage?) {
         guard let imageURL = URL(string:url) else {
             return
         }
-        self.kf.setImage(with: ImageResource(downloadURL: imageURL), placeholder: placeholder)
+        self.sd_setImage(with: imageURL, completed: nil)
     }
 }

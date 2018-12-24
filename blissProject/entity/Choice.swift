@@ -8,25 +8,9 @@
 
 import Foundation
 
-struct Choice{
+struct Choice:Codable{
+    
     var choice: String
     var votes: Int
-}
-
-extension Choice: Decodable{
-    
-    private enum ResultCodingKeys: String, CodingKey{
-        case choice
-        case votes
-        case image_url
-        case thumb_url
-        case published_at
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: ResultCodingKeys.self)
-        choice = try container.decode(String.self, forKey: .choice)
-        votes = try container.decode(Int.self, forKey: .votes)
-    }
 }
 

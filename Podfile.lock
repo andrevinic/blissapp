@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.8.0)
-  - Kingfisher (4.0.0)
   - lottie-ios (2.5.2)
+  - Masonry (1.1.0)
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
@@ -25,8 +25,8 @@ PODS:
   - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
-  - Kingfisher (<= 4.0)
   - lottie-ios
+  - Masonry
   - Moya/RxSwift (~> 11.0)
   - PNChart
   - R.swift (<= 3.0)
@@ -37,8 +37,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - Kingfisher
     - lottie-ios
+    - Masonry
     - Moya
     - PNChart
     - R.swift
@@ -52,8 +52,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  Kingfisher: 5cd55fa124d1e731f1d4b04b02832e0e0432d1a9
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   R.swift: 5a8b4a4ea565b0f20c39d8ce1445f3d3a9064768
@@ -65,6 +65,6 @@ SPEC CHECKSUMS:
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: cdd413662e4a729cd824356052c7000610d11094
+PODFILE CHECKSUM: 71f0e31d9c30cfb3cbc95ebb7ba1cba17116b388
 
 COCOAPODS: 1.5.3

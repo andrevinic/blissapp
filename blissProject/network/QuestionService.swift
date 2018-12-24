@@ -13,6 +13,7 @@ enum QuestionService{
     
     case questions(limit: Int, offset: Int)
     case health
+    case vote(question_id: Int)
 }
 
 extension QuestionService:TargetType{
@@ -24,6 +25,9 @@ extension QuestionService:TargetType{
             return parameters
         case .health:
             let parameters = [String: String]()
+            return parameters
+        case .vote:
+            let parameters = [String : String]()
             return parameters
         }
 
@@ -44,7 +48,9 @@ extension QuestionService:TargetType{
             return "/questions"
         case .health:
             return "/health"
-
+        
+        case .vote(let question_id):
+            return "/questions/\(question_id)"
         }
         
     }
@@ -56,7 +62,8 @@ extension QuestionService:TargetType{
             return .get
         case .health:
             return .get
-
+        case .vote:
+            return .put
         }
     }
     
@@ -71,7 +78,9 @@ extension QuestionService:TargetType{
         case .health:
             let parameters = [String: Any]()
             return parameters
-
+        case .vote:
+            let parameters = [String: Any]()
+            return parameters
         }
     }
     

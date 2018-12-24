@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2dG-v2-72f">
-                                <rect key="frame" x="45" y="26" width="286" height="91.5"/>
+                                <rect key="frame" x="45" y="26" width="286" height="96"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zs7-bw-aYt">
-                                <rect key="frame" x="45" y="169" width="286" height="429"/>
+                                <rect key="frame" x="44" y="169" width="286" height="429"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1E-Pw-gjO">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="0.0"/>
@@ -38,23 +38,14 @@
                                     <constraint firstAttribute="width" constant="286" id="wIY-Ow-3Sv"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Overview" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTA-FD-JJr">
-                                <rect key="frame" x="10" y="136" width="355" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JLg-F4-4kg" firstAttribute="trailing" secondItem="2dG-v2-72f" secondAttribute="trailing" constant="44" id="Fb4-xW-7Je"/>
-                            <constraint firstItem="BTA-FD-JJr" firstAttribute="leading" secondItem="JLg-F4-4kg" secondAttribute="leading" constant="10" id="Jkh-Xa-UgU"/>
                             <constraint firstItem="zs7-bw-aYt" firstAttribute="centerY" secondItem="Wp0-7s-Sd6" secondAttribute="centerY" constant="50" id="TBe-Zb-USb"/>
                             <constraint firstItem="2dG-v2-72f" firstAttribute="top" secondItem="JLg-F4-4kg" secondAttribute="top" constant="6" id="VcF-va-N26"/>
-                            <constraint firstItem="JLg-F4-4kg" firstAttribute="trailing" secondItem="BTA-FD-JJr" secondAttribute="trailing" constant="10" id="Xvq-9A-nZD"/>
-                            <constraint firstItem="zs7-bw-aYt" firstAttribute="top" secondItem="BTA-FD-JJr" secondAttribute="bottom" constant="13" id="cbk-St-smC"/>
+                            <constraint firstItem="zs7-bw-aYt" firstAttribute="top" secondItem="2dG-v2-72f" secondAttribute="bottom" constant="47" id="Zsh-rN-rxt"/>
                             <constraint firstItem="2dG-v2-72f" firstAttribute="leading" secondItem="JLg-F4-4kg" secondAttribute="leading" constant="45" id="gLb-jB-Art"/>
-                            <constraint firstItem="BTA-FD-JJr" firstAttribute="top" secondItem="2dG-v2-72f" secondAttribute="bottom" constant="18" id="i1G-pT-M4B"/>
                             <constraint firstItem="zs7-bw-aYt" firstAttribute="centerX" secondItem="Wp0-7s-Sd6" secondAttribute="centerX" id="mu1-2F-YKj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JLg-F4-4kg"/>
@@ -62,7 +53,6 @@
                     <connections>
                         <outlet property="detailChart" destination="P1E-Pw-gjO" id="OsO-bk-hyP"/>
                         <outlet property="imageQuestion" destination="2dG-v2-72f" id="9JU-hf-R8Q"/>
-                        <outlet property="questionOverview" destination="BTA-FD-JJr" id="REp-aK-cTI"/>
                         <outlet property="tableView" destination="OhK-fa-z3i" id="tIq-NK-yY9"/>
                     </connections>
                 </viewController>

@@ -3,3 +3,5 @@
 //
 
 #import "DetailsResultViewController.h"
+#import "RelatedQuestionDelegate.h"
+
