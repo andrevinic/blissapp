@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // Starts monitoring network reachability status changes
+        ReachabilityManager.shared.startMonitoring()
+    }
+    func applicationWillEnterForeground(_ application: UIApplication){
+        // Stops monitoring network reachability status changes
+        ReachabilityManager.shared.stopMonitoring()
+    }
 
 }
 

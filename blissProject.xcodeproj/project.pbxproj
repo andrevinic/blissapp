@@ -16,6 +16,8 @@
 		F003417121CB105B00B41912 /* details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F003417021CB105B00B41912 /* details.storyboard */; };
 		F029D53821D047840063FCC9 /* ChartsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F029D53721D047840063FCC9 /* ChartsBuilder.m */; };
 		F029D53F21D04F3E0063FCC9 /* DetailsResultViewController+BuildChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F029D53E21D04F3E0063FCC9 /* DetailsResultViewController+BuildChart.m */; };
+		F029D54221D067540063FCC9 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F029D54121D067540063FCC9 /* ReachabilityManager.swift */; };
+		F029D54421D06AB10063FCC9 /* NetworkStatusListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F029D54321D06AB10063FCC9 /* NetworkStatusListener.swift */; };
 		F042579821C71A8F00D09570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042579721C71A8F00D09570 /* AppDelegate.swift */; };
 		F042579A21C71A8F00D09570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042579921C71A8F00D09570 /* ViewController.swift */; };
 		F042579D21C71A8F00D09570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F042579B21C71A8F00D09570 /* Main.storyboard */; };
@@ -76,6 +78,8 @@
 		F029D53721D047840063FCC9 /* ChartsBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartsBuilder.m; sourceTree = "<group>"; };
 		F029D53D21D04F3E0063FCC9 /* DetailsResultViewController+BuildChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DetailsResultViewController+BuildChart.h"; sourceTree = "<group>"; };
 		F029D53E21D04F3E0063FCC9 /* DetailsResultViewController+BuildChart.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DetailsResultViewController+BuildChart.m"; sourceTree = "<group>"; };
+		F029D54121D067540063FCC9 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		F029D54321D06AB10063FCC9 /* NetworkStatusListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusListener.swift; sourceTree = "<group>"; };
 		F042579421C71A8F00D09570 /* blissProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blissProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F042579721C71A8F00D09570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F042579921C71A8F00D09570 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +206,15 @@
 			path = category;
 			sourceTree = "<group>";
 		};
+		F029D54021D067300063FCC9 /* reachability */ = {
+			isa = PBXGroup;
+			children = (
+				F029D54121D067540063FCC9 /* ReachabilityManager.swift */,
+				F029D54321D06AB10063FCC9 /* NetworkStatusListener.swift */,
+			);
+			path = reachability;
+			sourceTree = "<group>";
+		};
 		F042578B21C71A8F00D09570 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +240,7 @@
 		F042579621C71A8F00D09570 /* blissProject */ = {
 			isa = PBXGroup;
 			children = (
+				F029D54021D067300063FCC9 /* reachability */,
 				F0446D6121CD703700EECD26 /* blissProject-Bridging-Header.h */,
 				F04257E421C7438000D09570 /* R.generated.swift */,
 				F029D53521D0476E0063FCC9 /* charts */,
@@ -542,6 +556,7 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/PNChart/PNChart.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -557,6 +572,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PNChart.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -592,6 +608,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F04257D521C7374600D09570 /* LoadScreenViewController.swift in Sources */,
+				F029D54221D067540063FCC9 /* ReachabilityManager.swift in Sources */,
 				F04257CF21C72E4100D09570 /* NetworkManager.swift in Sources */,
 				F029D53821D047840063FCC9 /* ChartsBuilder.m in Sources */,
 				F0446D5B21CD165B00EECD26 /* QuestionResultTableViewCell.swift in Sources */,
@@ -600,6 +617,7 @@
 				F04257CC21C71F7100D09570 /* Question.swift in Sources */,
 				F04257E821C751C800D09570 /* UIImageView+SDWebImage.swift in Sources */,
 				F0446D6021CD663B00EECD26 /* UIColor.swift in Sources */,
+				F029D54421D06AB10063FCC9 /* NetworkStatusListener.swift in Sources */,
 				F04257D221C7300200D09570 /* Choice.swift in Sources */,
 				F04257D021C72E4100D09570 /* QuestionService.swift in Sources */,
 				F04257E321C742A900D09570 /* QuestionsViewModel.swift in Sources */,

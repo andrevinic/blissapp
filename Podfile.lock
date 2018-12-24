@@ -13,6 +13,7 @@ PODS:
   - R.swift (3.0.0):
     - R.swift.Library (~> 3.0.0)
   - R.swift.Library (3.0.2)
+  - ReachabilitySwift (4.3.0)
   - Result (3.2.4)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - Moya/RxSwift (~> 11.0)
   - PNChart
   - R.swift (<= 3.0)
+  - ReachabilitySwift
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - SDWebImage (~> 4.0)
@@ -43,6 +45,7 @@ SPEC REPOS:
     - PNChart
     - R.swift
     - R.swift.Library
+    - ReachabilitySwift
     - Result
     - RxAtomic
     - RxCocoa
@@ -58,6 +61,7 @@ SPEC CHECKSUMS:
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   R.swift: 5a8b4a4ea565b0f20c39d8ce1445f3d3a9064768
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
@@ -65,6 +69,6 @@ SPEC CHECKSUMS:
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: 71f0e31d9c30cfb3cbc95ebb7ba1cba17116b388
+PODFILE CHECKSUM: b59a7d2f256529a2592675cf60cf618455f87998
 
 COCOAPODS: 1.5.3

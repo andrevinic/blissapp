@@ -15,7 +15,8 @@ target 'blissProject' do
     pod 'PNChart'
     pod 'SDWebImage', '~> 4.0'
     pod 'Masonry'
-    
+    pod 'ReachabilitySwift'
+
     target 'blissProjectTests' do
         inherit! :search_paths
         # Pods for testing

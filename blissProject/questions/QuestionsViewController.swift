@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Reachability
 
 class QuestionsViewController: UIViewController {
     
     let viewModel = QuestionsViewModel()
-    
+
     @IBOutlet weak var tableView: UITableView! {
         didSet{
             tableView.delegate = self
@@ -22,8 +23,18 @@ class QuestionsViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(R.nib.questionTableViewCell)
         fetch()
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        ReachabilityManager.shared.addListener(listener: self)
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        ReachabilityManager.shared.removeListener(listener: self)
+
+    }
     func fetch(){
         self.viewModel.fetchQuestions { (success, error) in
             self.tableView.reloadData()
@@ -33,7 +44,6 @@ class QuestionsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 }
 
 extension QuestionsViewController: UITableViewDataSource{
@@ -103,4 +113,25 @@ extension QuestionsViewController: UITableViewDelegate{
             fetch()
         }
     }
+}
+
+extension QuestionsViewController: NetworkStatusListener {
+    
+    func networkStatusDidChange(status: Reachability.Connection) {
+        
+        switch status {
+        case .none:
+            let alert = UIAlertController(title: "Connection", message: "There is no connection", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            debugPrint("ViewController: Network became unreachable")
+        case .wifi:
+            debugPrint("ViewController: Network reachable through WiFi")
+        case .cellular:
+            debugPrint("ViewController: Network reachable through Cellular Data")
+        }
+
+    }
+    
+    
 }
