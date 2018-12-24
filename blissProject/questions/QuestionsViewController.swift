@@ -20,14 +20,22 @@ class QuestionsViewController: UIViewController {
             tableView.dataSource = self
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated:false);
+
         tableView.register(R.nib.questionTableViewCell)
         fetchQuestions()
         
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated:false);
+
+    }
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false;
+        self.navigationItem.setHidesBackButton(true, animated:true);
         ReachabilityManager.shared.addListener(listener: self)
 
     }
@@ -37,7 +45,6 @@ class QuestionsViewController: UIViewController {
 
     }
     func fetchQuestions(){
-        
         questionsViewModel.fetchQuestions { (success, error) in
             self.tableView.reloadData()
 

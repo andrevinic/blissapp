@@ -1,6 +1,6 @@
 //
 //  UpcomingService.swift
-//  
+//
 //
 //  Created by André Nogueira on 12/14/18.
 //  Copyright © 2018 André Nogueira. All rights reserved.
@@ -15,6 +15,7 @@ enum QuestionService{
     case question(question_id: Int)
     case health
     case vote(question_id: Int)
+    case share(destination_email: String, content_url: String?)
 }
 
 extension QuestionService:TargetType{
@@ -33,14 +34,17 @@ extension QuestionService:TargetType{
         case .vote:
             let parameters = [String : String]()
             return parameters
+        case .share:
+            let parameters = [String : String]()
+            return parameters
         }
-
+        
     }
     
     var environmentBaseURL: String{
         return "https://private-bbbe9-blissrecruitmentapi.apiary-mock.com"
     }
-        
+    
     var baseURL: URL {
         
         return URL(string: environmentBaseURL)!}
@@ -55,9 +59,11 @@ extension QuestionService:TargetType{
             return "/questions"
         case .health:
             return "/health"
-        
+            
         case .vote(let question_id):
             return "/questions/\(question_id)"
+        case .share:
+            return "/share"
         }
         
     }
@@ -73,6 +79,8 @@ extension QuestionService:TargetType{
             return .get
         case .vote:
             return .put
+        case .share:
+            return .post
         }
     }
     
@@ -92,6 +100,14 @@ extension QuestionService:TargetType{
         case .vote:
             let parameters = [String: Any]()
             return parameters
+            
+        case .share(let email, let content_url):
+            var parameters = [String: Any]()
+            parameters["destination_email"] = email
+            if let content = content_url {
+                parameters["content_url"] = content
+            }
+            return parameters
         }
     }
     
@@ -110,3 +126,4 @@ extension QuestionService:TargetType{
         return .requestParameters(parameters: parameters, encoding: parameterEncoding)
     }
 }
+

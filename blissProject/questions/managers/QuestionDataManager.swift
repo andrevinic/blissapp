@@ -43,5 +43,20 @@ class QuestionDataManager: NSObject {
         let question = self.questions[index]
         NetworkManager.shared.vote(question_id: question.id)
     }
+    
+    @objc func fetchShare(destination_email: String, content_url: String?, completion: @escaping (_ success: Bool, _ error: Error?) -> Void){
+        
+        NetworkManager.shared.share(destination_url: destination_email, content_url: content_url) { (success, error) in
+            if success{
+                completion(true, nil)
+            }
+            completion(false, nil)
+            
+            //    debugPrint(success)
+        }
+        
+    }
 }
+
+
 

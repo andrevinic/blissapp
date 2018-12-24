@@ -10,14 +10,25 @@
 #import "blissProject-Swift.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "DetailsResultViewController+BuildChart.h"
+#import "PopupViewController.h"
 
 @interface DetailsResultViewController()<UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (strong, nonatomic) PopupViewController *popupViewController;
 @end
 
 @implementation DetailsResultViewController
 
+- (IBAction)shareButton:(id)sender {
+    self.popupViewController = [[PopupViewController alloc]initWithNibName:@"PopupViewController" bundle:nil];
+    [self.popupViewController showInView:self.view animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.shareButton setHidden:YES];
+
+    [self.shareButton addTarget:self action:@selector(shareButton:) forControlEvents:UIControlEventTouchUpInside];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.chartsBuilder = [ChartsBuilder new];
@@ -39,6 +50,22 @@
 
 - (void)configureCell:(QuestionResultTableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
     cell.language.text = [self.choices_description objectAtIndex:indexPath.row];
+}
+
+- (void)showInView:(UIView *)aView animated:(BOOL)animated{
+    [aView addSubview:self.view];
+    if (animated) {
+        [self showAnimate];
+    }
+}
+- (void)showAnimate
+{
+    self.view.transform = CGAffineTransformMakeScale(1.3, 1.3);
+    self.view.alpha = 0;
+    [UIView animateWithDuration:.25 animations:^{
+        self.view.alpha = 1;
+        self.view.transform = CGAffineTransformMakeScale(1, 1);
+    }];
 }
 
 @end
@@ -90,7 +117,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.tableView.hidden = YES;
     self.detailChart.hidden = NO;
-    
+    [self.shareButton setHidden:NO];
     [self buildPieChart];
     [self buildBarChart];
     [self buildRadarChart];

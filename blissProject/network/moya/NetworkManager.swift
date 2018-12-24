@@ -50,7 +50,7 @@ struct NetworkManager: Networkable{
     
         provider.rx
             .request(.questions(limit: limit, offset: offset))
-        .subscribe(onSuccess: { (response) in
+            .subscribe(onSuccess: { (response) in
 
             if let results = try? response.map([Question].self, atKeyPath: nil, using: JSONDecoder(), failsOnEmptyData: true){
 
@@ -59,6 +59,18 @@ struct NetworkManager: Networkable{
 
         }) { (error) in
             debugPrint(error)
+        }
+    }
+    
+    func share(destination_url: String, content_url: String?, completion: @escaping (_ success: Bool, _ error: Error?) -> Void){
+        provider.request(.share(destination_email: destination_url, content_url: content_url)) { result in
+            
+            switch result {
+            case let .success(moyaResponse):
+                completion(true, nil)
+            case let .failure(error):
+                completion(false, error)
+            }
         }
     }
     
