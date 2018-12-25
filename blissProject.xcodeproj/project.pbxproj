@@ -46,6 +46,7 @@
 		F0EB45DE21D13BCF0068D7BD /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0EB45DC21D13BCF0068D7BD /* PopupViewController.xib */; };
 		F0EB45E221D141DA0068D7BD /* PopupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EB45E121D141DA0068D7BD /* PopupViewModel.m */; };
 		F0EB45E521D1A20E0068D7BD /* LoadScreenAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB45E421D1A20E0068D7BD /* LoadScreenAnimation.swift */; };
+		F0EB45EA21D256E60068D7BD /* ChartBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EB45E921D256E60068D7BD /* ChartBuilderSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,8 @@
 		F0EB45E021D141DA0068D7BD /* PopupViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopupViewModel.h; sourceTree = "<group>"; };
 		F0EB45E121D141DA0068D7BD /* PopupViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupViewModel.m; sourceTree = "<group>"; };
 		F0EB45E421D1A20E0068D7BD /* LoadScreenAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadScreenAnimation.swift; sourceTree = "<group>"; };
+		F0EB45E821D256E50068D7BD /* blissProjectTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "blissProjectTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F0EB45E921D256E60068D7BD /* ChartBuilderSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartBuilderSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +280,9 @@
 		F04257AB21C71A9000D09570 /* blissProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				F0EB45E821D256E50068D7BD /* blissProjectTests-Bridging-Header.h */,
+				F0EB45E721D256C70068D7BD /* charts */,
+				F0EB45E621D1DC180068D7BD /* stubs */,
 				F04257AC21C71A9000D09570 /* blissProjectTests.swift */,
 				F04257AE21C71A9000D09570 /* Info.plist */,
 			);
@@ -428,6 +434,21 @@
 			path = protocol;
 			sourceTree = "<group>";
 		};
+		F0EB45E621D1DC180068D7BD /* stubs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = stubs;
+			sourceTree = "<group>";
+		};
+		F0EB45E721D256C70068D7BD /* charts */ = {
+			isa = PBXGroup;
+			children = (
+				F0EB45E921D256E60068D7BD /* ChartBuilderSpec.m */,
+			);
+			path = charts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -459,6 +480,7 @@
 				F04257A421C71A9000D09570 /* Sources */,
 				F04257A521C71A9000D09570 /* Frameworks */,
 				F04257A621C71A9000D09570 /* Resources */,
+				A131F9AF262C69B97D309C55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -505,6 +527,7 @@
 					};
 					F04257A721C71A9000D09570 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = F042579321C71A8F00D09570;
 					};
 					F04257B221C71A9000D09570 = {
@@ -668,6 +691,32 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blissProject/Pods-blissProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A131F9AF262C69B97D309C55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-blissProjectTests/Pods-blissProjectTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blissProjectTests/Pods-blissProjectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F04257D621C73D5A00D09570 /* R Swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -720,6 +769,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0EB45EA21D256E60068D7BD /* ChartBuilderSpec.m in Sources */,
 				F04257AD21C71A9000D09570 /* blissProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -972,6 +1022,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFF7KW2SFY;
 				INFOPLIST_FILE = blissProjectTests/Info.plist;
@@ -982,6 +1033,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andre.blissProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "blissProjectTests/blissProjectTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blissProject.app/blissProject";
@@ -994,6 +1047,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFF7KW2SFY;
 				INFOPLIST_FILE = blissProjectTests/Info.plist;
@@ -1004,6 +1058,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andre.blissProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "blissProjectTests/blissProjectTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blissProject.app/blissProject";
