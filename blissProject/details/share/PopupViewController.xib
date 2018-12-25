@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupViewController">
+            <connections>
+                <outlet property="emailTextField" destination="dWb-Gi-ULj" id="S3f-C1-rZA"/>
+                <outlet property="popUpView" destination="zgt-Av-DLR" id="ezd-WX-Y1x"/>
+                <outlet property="shareButton" destination="39W-f1-ntE" id="0eg-Nh-CLR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgt-Av-DLR">
+                    <rect key="frame" x="67.5" y="195" width="240" height="186"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="myemail@domain.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWb-Gi-ULj">
+                            <rect key="frame" x="22" y="78" width="196" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpD-Cd-rgh">
+                            <rect key="frame" x="22" y="49" width="124" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39W-f1-ntE">
+                            <rect key="frame" x="100" y="131" width="40" height="30"/>
+                            <state key="normal" title="Share">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedOnShare:" destination="-1" eventType="touchUpInside" id="go0-Kw-NAH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHd-j3-kCS">
+                            <rect key="frame" x="186" y="8" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                            <state key="normal" title="X">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="closePopup:" destination="-1" eventType="touchUpInside" id="etu-Nu-a8w"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="5Fa-g2-EKn"/>
+                        <constraint firstItem="dWb-Gi-ULj" firstAttribute="leading" secondItem="zgt-Av-DLR" secondAttribute="leading" constant="22" id="AeQ-4Q-KPK"/>
+                        <constraint firstAttribute="trailing" secondItem="dWb-Gi-ULj" secondAttribute="trailing" constant="22" id="GDi-nX-6gy"/>
+                        <constraint firstItem="lpD-Cd-rgh" firstAttribute="leading" secondItem="zgt-Av-DLR" secondAttribute="leading" constant="22" id="PE9-vD-prJ"/>
+                        <constraint firstAttribute="bottom" secondItem="39W-f1-ntE" secondAttribute="bottom" constant="25" id="lSG-h9-NLB"/>
+                        <constraint firstAttribute="height" constant="186" id="nZQ-an-XCq"/>
+                        <constraint firstItem="dWb-Gi-ULj" firstAttribute="top" secondItem="lpD-Cd-rgh" secondAttribute="bottom" constant="8" id="peF-zW-h3q"/>
+                        <constraint firstItem="39W-f1-ntE" firstAttribute="centerX" secondItem="zgt-Av-DLR" secondAttribute="centerX" id="vbh-gL-50R"/>
+                        <constraint firstItem="lpD-Cd-rgh" firstAttribute="top" secondItem="zgt-Av-DLR" secondAttribute="top" constant="49" id="vfv-8R-5bH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zgt-Av-DLR" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="175" id="3uF-kn-OQw"/>
+                <constraint firstItem="zgt-Av-DLR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8mr-xQ-LOW"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="138.40000000000001" y="111.99400299850076"/>
+        </view>
+    </objects>
+</document>

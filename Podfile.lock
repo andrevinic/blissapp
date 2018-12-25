@@ -1,52 +1,84 @@
 PODS:
   - Alamofire (4.8.0)
-  - Kingfisher (4.0.0)
+  - lottie-ios (2.5.2)
+  - Masonry (1.1.0)
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - Moya/RxSwift (11.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
   - R.swift (3.0.0):
     - R.swift.Library (~> 3.0.0)
   - R.swift.Library (3.0.2)
+  - ReachabilitySwift (4.3.0)
   - Result (3.2.4)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
+  - SnapKit (4.0.1)
+  - SwiftMessages (5.0.1):
+    - SwiftMessages/App (= 5.0.1)
+  - SwiftMessages/App (5.0.1)
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
-  - Kingfisher (<= 4.0)
+  - lottie-ios
+  - Masonry
   - Moya/RxSwift (~> 11.0)
+  - PNChart
   - R.swift (<= 3.0)
+  - ReachabilitySwift
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - SDWebImage (~> 4.0)
+  - SnapKit (~> 4.0.0)
+  - SwiftMessages (= 5.0.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - Kingfisher
+    - lottie-ios
+    - Masonry
     - Moya
+    - PNChart
     - R.swift
     - R.swift.Library
+    - ReachabilitySwift
     - Result
     - RxAtomic
     - RxCocoa
     - RxSwift
+    - SDWebImage
+    - SnapKit
+    - SwiftMessages
+    - UICountingLabel
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  Kingfisher: 5cd55fa124d1e731f1d4b04b02832e0e0432d1a9
+  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Moya: a725035953bc1c0eb1be505ab903984501d82440
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   R.swift: 5a8b4a4ea565b0f20c39d8ce1445f3d3a9064768
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: 5297d5ee69982a930cf13b13c3a8a3722bbad118
+PODFILE CHECKSUM: be13fd5b526108aa3bf5acbcd530ccde4a15ac47
 
 COCOAPODS: 1.5.3
