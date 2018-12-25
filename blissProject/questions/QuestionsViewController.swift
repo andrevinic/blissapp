@@ -9,7 +9,6 @@
 import UIKit
 import Reachability
 import SwiftMessages
-import ListPlaceholder
 
 class QuestionsViewController: UIViewController {
     
@@ -47,16 +46,9 @@ class QuestionsViewController: UIViewController {
 
     }
     
-    @objc func removeLoader()
-    {
-        self.tableView.hideLoader()
-    }
-    
     func fetchQuestions(){
-        self.tableView.showLoader()
         questionsViewModel.fetchQuestions { (success, error) in
             self.tableView.reloadData()
-            Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.removeLoader), userInfo: nil, repeats: false)
 
         }
     }
