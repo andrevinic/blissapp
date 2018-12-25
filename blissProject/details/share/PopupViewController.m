@@ -89,8 +89,10 @@
             [self.shareButton setEnabled:NO];
         }
     } failure:^(NSError * _Nonnull error) {
-        [self.shareButton setTitle:@"Error! Retry" forState:UIControlStateNormal];
-        [self.shareButton setEnabled:YES];
+        if(error != nil){
+            [self.shareButton setTitle:@"Error! Retry" forState:UIControlStateNormal];
+            [self.shareButton setEnabled:YES];
+        }
     }];
     
 }
