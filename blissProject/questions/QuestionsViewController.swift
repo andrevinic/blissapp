@@ -9,6 +9,7 @@
 import UIKit
 import Reachability
 import SwiftMessages
+import ListPlaceholder
 
 class QuestionsViewController: UIViewController {
     
@@ -26,6 +27,7 @@ class QuestionsViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:false);
 
         tableView.register(R.nib.questionTableViewCell)
+        
         fetchQuestions()
         
     }
@@ -44,9 +46,17 @@ class QuestionsViewController: UIViewController {
         ReachabilityManager.shared.removeListener(listener: self)
 
     }
+    
+    @objc func removeLoader()
+    {
+        self.tableView.hideLoader()
+    }
+    
     func fetchQuestions(){
+        self.tableView.showLoader()
         questionsViewModel.fetchQuestions { (success, error) in
             self.tableView.reloadData()
+            Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.removeLoader), userInfo: nil, repeats: false)
 
         }
     }

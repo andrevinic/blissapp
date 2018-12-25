@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.0)
+  - ListPlaceholder (1.4)
   - lottie-ios (2.5.2)
   - Masonry (1.1.0)
   - Moya/Core (11.0.2):
@@ -30,6 +31,7 @@ PODS:
   - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
+  - ListPlaceholder
   - lottie-ios
   - Masonry
   - Moya/RxSwift (~> 11.0)
@@ -45,6 +47,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - ListPlaceholder
     - lottie-ios
     - Masonry
     - Moya
@@ -63,6 +66,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  ListPlaceholder: 08ddaddf67520a20fc52cf37160fb56aa64d071d
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Moya: a725035953bc1c0eb1be505ab903984501d82440
@@ -79,6 +83,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: 113353d15acbf56d0f4df2c42768aff9b4ab8d06
+PODFILE CHECKSUM: 443754f0a0bd259727da49f6593cb5e6463c68fa
 
 COCOAPODS: 1.5.3

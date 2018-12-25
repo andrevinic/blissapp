@@ -19,6 +19,7 @@ target 'blissProject' do
 
     pod 'ReachabilitySwift'
     pod 'SwiftMessages',  '5.0.1'
+    pod 'ListPlaceholder'
 
     target 'blissProjectTests' do
         inherit! :search_paths
