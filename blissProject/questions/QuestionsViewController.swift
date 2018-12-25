@@ -13,6 +13,8 @@ import SwiftMessages
 class QuestionsViewController: UIViewController {
     
     let questionsViewModel = QuestionsViewModel()
+    let searchController = UISearchController(searchResultsController: nil)
+    var filteredQuestions = [Question]()
     
     @IBOutlet weak var tableView: UITableView! {
         didSet{
@@ -28,7 +30,8 @@ class QuestionsViewController: UIViewController {
         tableView.register(R.nib.questionTableViewCell)
         
         fetchQuestions()
-        
+        setupSearchFilter()
+      
     }
     override func viewDidAppear(_ animated: Bool) {
         self.navigationItem.setHidesBackButton(true, animated:false);
@@ -47,7 +50,7 @@ class QuestionsViewController: UIViewController {
     }
     
     func fetchQuestions(){
-        questionsViewModel.fetchQuestions { (success, error) in
+        questionsViewModel.fetchQuestions{ (success, error) in
             self.tableView.reloadData()
 
         }
@@ -55,6 +58,31 @@ class QuestionsViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func setupSearchFilter(){
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Questions"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+
+        self.questionsViewModel.fetchQuestions(filter_query: searchText.lowercased()) { (filteredQuestions, error) in
+            self.filteredQuestions = filteredQuestions
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -66,22 +94,31 @@ extension QuestionsViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredQuestions.count
+        }
         return questionsViewModel.questionDataManager.questionsLength()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.questionTableViewCell.identifier, for: indexPath)
-            
+        let question: Question
+        
+        if isFiltering() {
+            question = filteredQuestions[indexPath.row]
+        }else{
+            question = questionsViewModel.questionDataManager.questions[indexPath.row]
+        }
+        
         if let cellQuestion = cell as? QuestionTableViewCell {
-            configureCell(cell: cellQuestion, forRowAt: indexPath)
+            configureCell(question: question, cell: cellQuestion, forRowAt: indexPath)
         }
         
         return cell
     }
     
-    func configureCell(cell: QuestionTableViewCell, forRowAt indexPath: IndexPath) {
-        let question = questionsViewModel.questionDataManager.questions[indexPath.row]
+    func configureCell(question: Question, cell: QuestionTableViewCell, forRowAt indexPath: IndexPath) {
         cell.selectionStyle = .none
         cell.configureCell(imageQuestion: question.thumb_url, questionField: question.question)
     }
@@ -131,6 +168,9 @@ extension QuestionsViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if isFiltering(){return}
+        
         let index = indexPath.row
         
         if index == self.questionsViewModel.questionDataManager.questions.count - 1 {
@@ -155,4 +195,11 @@ extension QuestionsViewController: NetworkStatusListener {
 
     }
     
+}
+
+extension QuestionsViewController:UISearchResultsUpdating{
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
 }

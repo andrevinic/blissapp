@@ -11,7 +11,7 @@ import Moya
 
 enum QuestionService{
     
-    case questions(limit: Int, offset: Int)
+    case questions(limit: Int, offset: Int, filter: String?)
     case question(question_id: Int)
     case health
     case vote(question_id: Int)
@@ -89,10 +89,13 @@ extension QuestionService:TargetType{
         case .question:
             let parameters = [String: Any]()
             return parameters
-        case .questions(let limit, let offset):
+        case .questions(let limit, let offset, let filter):
             var parameters = [String: Any]()
             parameters["limit"] = limit
             parameters["offset"] = offset
+            if let filter_query = filter{
+                parameters["filter"] = filter_query
+            }
             return parameters
         case .health:
             let parameters = [String: Any]()

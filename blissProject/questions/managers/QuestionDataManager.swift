@@ -27,11 +27,18 @@ class QuestionDataManager: NSObject {
     }
     
     func fetchQuestions(completion: @escaping (_ success: Bool, _ error: Error?) -> Void){
-        
-        NetworkManager.shared.fetchQuestions(limit: limit, offset: offset)  { (questions, error) in
+  
+        NetworkManager.shared.fetchQuestions(limit: limit, offset: offset, filter: "")  { (questions, error) in
             self.questions.append(contentsOf: questions)
             completion(true, nil)
             self.offset += self.limit
+        }
+    }
+    
+    func fetchQuestions(filter_query: String, completion: @escaping (_ filteredQuestions: [Question], _ error: Error?) -> Void){
+        
+        NetworkManager.shared.fetchQuestions(limit: limit, offset: offset, filter: filter_query ?? "")  { (questions, error) in
+            completion(questions, nil)
         }
     }
     

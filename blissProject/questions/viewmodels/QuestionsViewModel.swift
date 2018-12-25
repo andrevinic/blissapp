@@ -17,11 +17,17 @@ class QuestionsViewModel: NSObject {
             completion(question, error)
         }
     }
-    
     func fetchQuestions(completion: @escaping (_ success: Bool, _ error: Error?) -> Void){
         
         questionDataManager.fetchQuestions { (success, error) in
             completion(success, error)
+        }
+    }
+    
+    func fetchQuestions(filter_query: String, completion: @escaping (_ filteredQuestions: [Question], _ error: Error?) -> Void){
+        
+        questionDataManager.fetchQuestions(filter_query: filter_query) { (filteredQuestions, error) in
+            completion(filteredQuestions, error)
         }
     }
     
