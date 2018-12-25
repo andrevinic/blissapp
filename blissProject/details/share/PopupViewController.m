@@ -8,11 +8,15 @@
 
 #import "PopupViewController.h"
 #import "blissProject-Swift.h"
+#import "PopupViewModel.h"
 
 @interface PopupViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
+@end
+@interface PopupViewController ()
+@property (nonatomic) PopupViewModel *popupViewModel;
 @end
 
 @implementation PopupViewController
@@ -21,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.popupViewModel = [PopupViewModel new];
     [self.shareButton setEnabled:NO];
     self.shareButton.alpha = 0.5;
 
@@ -78,11 +83,14 @@
     
     NSString *destination_email = self.emailTextField.text;
 
-    [[QuestionDataManager sharedInstance] fetchShareWithDestination_email:destination_email content_url:nil completion:^(BOOL success, NSError * error) {
-        if(success){
+    [self.popupViewModel fetchShareWithDestination_email:destination_email success:^(BOOL result) {
+        if(result){
             [self.shareButton setTitle:@"Email shared!" forState:UIControlStateNormal];
-            [self.shareButton setEnabled:FALSE];
+            [self.shareButton setEnabled:NO];
         }
+    } failure:^(NSError * _Nonnull error) {
+        [self.shareButton setTitle:@"Error! Retry" forState:UIControlStateNormal];
+        [self.shareButton setEnabled:YES];
     }];
     
 }

@@ -17,6 +17,7 @@ class QuestionResultTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
     }
 
     func configureCell(language: String, votes: Int, totalVotes: Int){

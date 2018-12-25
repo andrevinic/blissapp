@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PopupViewModel : NSObject
-
+- (void)fetchShareWithDestination_email:(NSString *)destination_email
+                                success:(void (^)(BOOL))success
+                                failure:(void (^)(NSError *error))failure;
 @end
 
 NS_ASSUME_NONNULL_END

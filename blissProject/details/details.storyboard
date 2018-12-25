@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2dG-v2-72f">
-                                <rect key="frame" x="45" y="70" width="286" height="52"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="90"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zs7-bw-aYt">
                                 <rect key="frame" x="44.5" y="169" width="286" height="429"/>
@@ -41,11 +41,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JLg-F4-4kg" firstAttribute="trailing" secondItem="2dG-v2-72f" secondAttribute="trailing" constant="44" id="Fb4-xW-7Je"/>
+                            <constraint firstItem="JLg-F4-4kg" firstAttribute="trailing" secondItem="2dG-v2-72f" secondAttribute="trailing" id="Fb4-xW-7Je"/>
                             <constraint firstItem="zs7-bw-aYt" firstAttribute="centerY" secondItem="Wp0-7s-Sd6" secondAttribute="centerY" constant="50" id="TBe-Zb-USb"/>
-                            <constraint firstItem="2dG-v2-72f" firstAttribute="top" secondItem="JLg-F4-4kg" secondAttribute="top" constant="6" id="VcF-va-N26"/>
-                            <constraint firstItem="zs7-bw-aYt" firstAttribute="top" secondItem="2dG-v2-72f" secondAttribute="bottom" constant="47" id="Zsh-rN-rxt"/>
-                            <constraint firstItem="2dG-v2-72f" firstAttribute="leading" secondItem="JLg-F4-4kg" secondAttribute="leading" constant="45" id="gLb-jB-Art"/>
+                            <constraint firstItem="2dG-v2-72f" firstAttribute="top" secondItem="JLg-F4-4kg" secondAttribute="top" id="VcF-va-N26"/>
+                            <constraint firstItem="zs7-bw-aYt" firstAttribute="top" secondItem="2dG-v2-72f" secondAttribute="bottom" constant="15" id="Zsh-rN-rxt"/>
+                            <constraint firstItem="2dG-v2-72f" firstAttribute="leading" secondItem="JLg-F4-4kg" secondAttribute="leading" id="gLb-jB-Art"/>
                             <constraint firstItem="zs7-bw-aYt" firstAttribute="centerX" secondItem="Wp0-7s-Sd6" secondAttribute="centerX" id="mu1-2F-YKj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JLg-F4-4kg"/>
