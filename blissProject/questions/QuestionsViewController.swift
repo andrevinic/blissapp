@@ -67,6 +67,7 @@ class QuestionsViewController: UIViewController {
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
+    
     func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()
     }
