@@ -76,3 +76,6 @@ iOS project has the following configuration:
 ### Installing
 * Go into projects folder and type pod install
 * open workspace project
+
+
+![alt text](https://github.com/andrevinic/blissProject/blob/master/screenshots/screen_1.png)
