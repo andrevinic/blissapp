@@ -78,13 +78,13 @@ iOS project has the following configuration:
 * open workspace project
 
 
-![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_1.png)
-![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_2.png)
-![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_3.png)
+![alt text](https://github.com/andrevinic/blissapp/blob/master/screenshots/screen_1.png)
+![alt text](https://github.com/andrevinic/blissapp/blob/master/screenshots/screen_2.png)
+![alt text](https://github.com/andrevinic/blissapp/blob/master/screenshots/screen_3.png)
 
-![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_4.png)
-![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_5.png)
+![alt text](https://github.com/andrevinic/blissapp/blob/master/screenshots/screen_4.png)
+![alt text](https://github.com/andrevinic/blissapp/blob/master/screenshots/screen_5.png)
 
-![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_6.png)
-![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_7.png)
-![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_8.png)
+![alt text](https://github.com/andrevinic/blissapp/blob/master/screenshots/screen_6.png)
+![alt text](https://github.com/andrevinic/blissapp/blob/master/screenshots/screen_7.png)
+![alt text](https://github.com/andrevinic/blissapp/blob/master/screenshots/screen_8.png)
