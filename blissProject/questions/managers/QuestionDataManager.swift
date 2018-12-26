@@ -35,7 +35,7 @@ class QuestionDataManager: NSObject {
         }
     }
     
-    func fetchQuestions(filter_query: String, completion: @escaping (_ filteredQuestions: [Question], _ error: Error?) -> Void){
+    func fetchQuestions(filter_query: String?, completion: @escaping (_ filteredQuestions: [Question], _ error: Error?) -> Void){
         
         NetworkManager.shared.fetchQuestions(limit: limit, offset: offset, filter: filter_query ?? "")  { (questions, error) in
             completion(questions, nil)

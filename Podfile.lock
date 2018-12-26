@@ -8,8 +8,10 @@ PODS:
   - Moya/RxSwift (11.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - Nimble (7.3.1)
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
+  - Quick (1.3.2)
   - R.swift (3.0.0):
     - R.swift.Library (~> 3.0.0)
   - R.swift.Library (3.0.2)
@@ -33,7 +35,9 @@ DEPENDENCIES:
   - lottie-ios
   - Masonry
   - Moya/RxSwift (~> 11.0)
+  - Nimble
   - PNChart
+  - Quick
   - R.swift (<= 3.0)
   - ReachabilitySwift
   - RxCocoa (~> 4.0)
@@ -48,7 +52,9 @@ SPEC REPOS:
     - lottie-ios
     - Masonry
     - Moya
+    - Nimble
     - PNChart
+    - Quick
     - R.swift
     - R.swift.Library
     - ReachabilitySwift
@@ -66,7 +72,9 @@ SPEC CHECKSUMS:
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
   R.swift: 5a8b4a4ea565b0f20c39d8ce1445f3d3a9064768
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
@@ -79,6 +87,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: be13fd5b526108aa3bf5acbcd530ccde4a15ac47
+PODFILE CHECKSUM: 20f023286d7da50723c8c234ae41ff7040940f69
 
 COCOAPODS: 1.5.3

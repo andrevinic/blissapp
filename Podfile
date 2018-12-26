@@ -22,6 +22,9 @@ target 'blissProject' do
     target 'blissProjectTests' do
         inherit! :search_paths
         # Pods for testing
+        
+        pod 'Quick'
+        pod 'Nimble'
     end
     
     target 'blissProjectUITests' do
