@@ -25,7 +25,6 @@ target 'blissProject' do
         
         pod 'Quick'
         pod 'Nimble'
-        pod 'OHHTTPStubs/Swift' 
     end
     
     target 'blissProjectUITests' do

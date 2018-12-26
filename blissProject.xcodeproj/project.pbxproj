@@ -282,7 +282,6 @@
 			children = (
 				F0EB45E821D256E50068D7BD /* blissProjectTests-Bridging-Header.h */,
 				F0EB45E721D256C70068D7BD /* charts */,
-				F0EB45E621D1DC180068D7BD /* stubs */,
 				F04257AC21C71A9000D09570 /* blissProjectTests.swift */,
 				F04257AE21C71A9000D09570 /* Info.plist */,
 			);
@@ -432,13 +431,6 @@
 				F0EB45E421D1A20E0068D7BD /* LoadScreenAnimation.swift */,
 			);
 			path = protocol;
-			sourceTree = "<group>";
-		};
-		F0EB45E621D1DC180068D7BD /* stubs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = stubs;
 			sourceTree = "<group>";
 		};
 		F0EB45E721D256C70068D7BD /* charts */ = {
@@ -701,7 +693,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-blissProjectTests/Pods-blissProjectTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -709,7 +700,6 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
