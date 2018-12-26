@@ -87,3 +87,4 @@ iOS project has the following configuration:
 
 ![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_6.png)
 ![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_7.png)
+![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_8.png)
