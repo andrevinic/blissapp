@@ -78,4 +78,4 @@ iOS project has the following configuration:
 * open workspace project
 
 
-![alt text](https://github.com/andrevinic/blissProject/blob/master/screenshots/screen_1.png)
+![alt text](https://github.com/andrevinic/blissapp/blob/development/screenshots/screen_1.png)
